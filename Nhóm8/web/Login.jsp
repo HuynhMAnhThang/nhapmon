@@ -1,106 +1,87 @@
-
-
-
 <!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-            body {font-family: Arial, Helvetica, sans-serif;}
-            form {border: 3px solid #f1f1f1;}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Sign Up Form by Colorlib</title>
 
-            input[type=text], input[type=password] {
-                width: 100%;
-                padding: 12px 20px;
-                margin: 8px 0;
-                display: inline-block;
-                border: 1px solid #ccc;
-                box-sizing: border-box;
-            }
+        <!-- Font Icon -->
+        <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
 
-            button {
-                background-color: #4CAF50;
-                color: white;
-                padding: 14px 20px;
-                margin: 8px 0;
-                border: none;
-                cursor: pointer;
-                width: 100%;
-                height: 15px;
-            }
-
-            button:hover {
-                opacity: 0.8;
-            }
-
-            .cancelbtn {
-                width: auto;
-                padding: 10px 18px;
-                background-color: #f44336;
-            }
-
-            .imgcontainer {
-                text-align: center;
-                margin: 24px 0 12px 0;
-            }
-
-            img.avatar {
-                width: 40%;
-                border-radius: 50%;
-            }
-
-            .container {
-                padding: 16px;
-            }
-
-            span.psw {
-                float: right;
-                padding-top: 16px;
-            }
-
-            /* Change styles for span and cancel button on extra small screens */
-            @media screen and (max-width: 300px) {
-                span.psw {
-                    display: block;
-                    float: none;
-                }
-                .cancelbtn {
-                    width: 100%;
-                }
-            }
-
-        </style>
+        <!-- Main css -->
+        <link rel="stylesheet" href="css/style.css">
     </head>
-    <body style="background-color: honeydew">
-        <div align="center" >
+    <body>
+<!--                <div align="center" >
+        
+                    <form action="Controller" method="post" style="width: 600px;background-color: azure;"  >
+                        <div class="imgcontainer">
+                            <h1>Login</h1>
+                            <img src="img/logo.jpg" alt="Avatar" class="avatar">
+                        </div>
+        
+                        <div class="container">
+                            <label for="uname"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="txtUser" required>
+        
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="txtPass" required>
+        
+        
+                            <button type="submit" name="btnAction"  value="Login" style="padding-top: 7px;padding-bottom: 20px;" >Login</button>
+                            <a href="NewLogin_1.jsp"><button type="button" name="btnAction"  value="Dangky" style="padding-top: 7px;padding-bottom: 20px;">Registration</button></a>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Rememberme
+                            </label>
+                        </div>
+        
+                        <div class="container" style="background-color:#f1f1f1">
+                            <button type="button" class="cancelbtn" style="padding-bottom: 22px;padding-top: 8px;"> <a href="#">Cancel</a></button>
+                            <span class="psw">Forgot <a href="#">password?</a></span>
+                        </div>
+                    </form>
+                </div>-->
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <figure><img src="images/signin-image.jpg" alt="sing up image"></figure>
+                        <a href="NewLogin_1.jsp" class="signup-image-link">Tạo tài khoản</a>
+                    </div>
 
-            <form action="Controller" method="post" style="width: 600px;background-color: azure;"  >
-                <div class="imgcontainer">
-                    <h1>Login</h1>
-                    <img src="img/logo.jpg" alt="Avatar" class="avatar">
+                    <div class="signin-form">
+                        <h2 class="form-title">Đăng nhập</h2>
+                        <form action="Controller" method="post" class="register-form" id="login-form">
+                            <div class="form-group">
+                                <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="txtUser" id="your_name" placeholder="Tài khoản"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                                <input type="password" name="txtPass" id="your_pass" placeholder="Mật khẩu"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+                                <label for="remember-me" class="label-agree-term"><span><span></span></span>Lưu tài khoản</label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="btnAction"  value="Login" id="signin" class="form-submit"/>
+                            </div>
+                        </form>
+                        <div class="social-login">
+                            <span class="social-label">Hoặc đăng nhập bằng</span>
+                            <ul class="socials">
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-facebook"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-twitter"></i></a></li>
+                                <li><a href="#"><i class="display-flex-center zmdi zmdi-google"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="txtUser" required>
-
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="txtPass" required>
-
-
-                    <button type="submit" name="btnAction"  value="Login" style="padding-top: 7px;padding-bottom: 20px;" >Login</button>
-                    <a href="NewLogin_1.jsp"><button type="button" name="btnAction"  value="Dangky" style="padding-top: 7px;padding-bottom: 20px;">Registration</button></a>
-                    <label>
-                        <input type="checkbox" checked="checked" name="remember"> Rememberme
-                    </label>
-                </div>
-
-                <div class="container" style="background-color:#f1f1f1">
-                    <button type="button" class="cancelbtn" style="padding-bottom: 22px;padding-top: 8px;"> <a href="#">Cancel</a></button>
-                    <span class="psw">Forgot <a href="#">password?</a></span>
-                </div>
-            </form>
-        </div>
+            </div>
+        </section>
     </body>
 </html>
 
