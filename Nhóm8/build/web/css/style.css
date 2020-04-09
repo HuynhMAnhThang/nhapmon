@@ -1,0 +1,53 @@
+body, html {
+    margin: 0;
+    height: auto;
+}
+body {
+    width: 100%;
+}
+.bodi {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.sp {
+    background-color: white;
+    width: 171px;
+    margin: 20px 5px;
+    padding: 5px 5px 5px 5px;
+}
+.spName {
+    text-align: justify;
+    margin: 2px 0px;
+}
+.spPrice {
+    color: #ff5722!important;
+    margin: 2px 0px;
+}
+.spInfo {
+    text-align: justify;
+    margin: 5px 0px;
+}
+.spAdd {
+    font-size: 18px;
+    margin-left: 3px;
+    background: #3f51b5!important;
+    color: white;
+}
+nav input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+nav input[type=text]:focus {
+    width: 400px;
+}

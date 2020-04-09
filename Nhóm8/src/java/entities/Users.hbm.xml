@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 29, 2019 11:14:08 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entities.Users" table="Users" schema="dbo" catalog="Ass_Java4" optimistic-lock="version">
+        <id name="userName" type="java.lang.String">
+            <column name="UserName" />
+            <generator class="assigned" />
+        </id>
+        <property name="password" type="java.lang.String">
+            <column name="Password" />
+        </property>
+        <property name="ten" type="java.lang.String">
+            <column name="Ten" />
+        </property>
+        <property name="sdt" type="java.lang.String">
+            <column name="SDT" />
+        </property>
+        <property name="permission" type="java.lang.String">
+            <column name="Permission" />
+        </property>
+    </class>
+</hibernate-mapping>
