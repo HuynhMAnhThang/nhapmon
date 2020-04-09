@@ -6,126 +6,86 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <title>JSP Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Đăng ký</title>
+
+        <!-- Font Icon -->
+        <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+        <!-- Main css -->
+        <link rel="stylesheet" href="css/style.css">
         <style>
-            body {
-                font-family: Arial, Helvetica, sans-serif;
-                background-color: black;
+            .signup{
+                padding-top: 50px;
             }
-
-            * {
-                box-sizing: border-box;
+            body{
+                font-family: Arial !important;
             }
-
-            /* Add padding to containers */
-            .container {
-                padding: 16px;
-                background-color: white;
+            h2{
+                font-family: Arial !important;
             }
-
-            /* Full-width input fields */
-            input[type=text], input[type=password] {
-                width: 100%;
-                padding: 15px;
-                margin: 5px 0 22px 0;
-                display: inline-block;
-                border: none;
-                background: #f1f1f1;
-            }
-
-            input[type=text]:focus, input[type=password]:focus {
-                background-color: #ddd;
-                outline: none;
-            }
-
-            /* Overwrite default styles of hr */
-            hr {
-                border: 1px solid #f1f1f1;
-                margin-bottom: 25px;
-            }
-
-            /* Set a style for the submit button */
-            .registerbtn {
-                background-color: #4CAF50;
-                color: white;
-                padding: 16px 20px;
-                margin: 8px 0;
-                border: none;
-                cursor: pointer;
-                width: 100%;
-                opacity: 0.9;
-            }
-
-            .registerbtn:hover {
-                opacity: 1;
-            }
-
-            /* Add a blue text color to links */
-            a {
-                color: dodgerblue;
-            }
-
-            /* Set a grey background color and center the text of the "sign in" section */
-            .signin {
-                background-color: #f1f1f1;
-                text-align: center;
+            input{
+                font-family: Arial !important;
             }
         </style>
     </head>
-    <body style="background-color: bisque; " >
-    <center>
-        <div  algin="center" style="width:600px">
-            <form>
-                <div class="container">
-                    <p>ĐĂNG KÝ TÀI KHOẢN</p>
-                    <p>Vui lòng điền vào mẫu này để tạo một tài khoản.</p>
-                    <hr>
-
-                    <label for="email"><b>UserName</b></label>
-                    <input type="text" placeholder="Enter UserName" name="txt1User" required>
-                    <label for="psw"><b>Password</b></label>
-                    <input type="password" placeholder="Enter Password" name="txt1Pass" required>
-                    <label for="psw"><b>FullName</b></label>
-                    <input type="text" placeholder="Enter FullName" name="txt1Name" required>
-                    <label for="psw"><b>NumberPhone</b></label>
-                    <input type="text" placeholder="Enter NumberPhone" name="txt1Sdt" required>
-                    <label>Permission</label>
-                    <select style="width: 84%;" name="cbo1Quyen" disabled>
-                        <option  value="nv">Người dùng</option>
-                    </select>
-                    <hr>
-
-                    <button type="submit" class="registerbtn">Register</button>
+    <body>
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Đăng ký</h2>
+                        <form class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="username"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="txt1User" required id="username" placeholder="Tên tài khoản"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="zmdi zmdi-email"></i></label>
+                                <input type="password" name="txt1Pass" required id="pass" placeholder="Mật khẩu"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="fullname"><i class=""></i></label>
+                                <input type="text" name="txt1Name" id="fullname" placeholder="Họ tên"/>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone"><i class=""></i></label>
+                                <input type="text" name="txt1Sdt" id="phone" placeholder="Số điện thoại"/>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                                <label for="agree-term" class="label-agree-term"><span><span></span></span>Tôi đồng ý với <a href="#" class="term-service">điều khoản và điều kiện</a> sử dụng trang web</label>
+                            </div>
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Đăng ký"/>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
+                        <a href="Login.jsp" class="signup-image-link">Đã có tài khoản !</a>
+                    </div>
                 </div>
+            </div>
+        </section>
+        <sql:setDataSource driver="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+                           url="jdbc:sqlserver://localhost:1433;databaseName=Ass_Java4"
+                           user="sa"
+                           password="123"
+                           var="con"/>
 
-                <div class="container signin">
-                    <p>Already have an account? <a href="Controller?btnAction=Dangnhap">Sign in</a>.</p>
-                </div>
-                 <a href="Trangchu_2.jsp">Quay Lại</a>
-            </form>
-            <hr>
-            <sql:setDataSource driver="com.microsoft.sqlserver.jdbc.SQLServerDriver"
-                               url="jdbc:sqlserver://localhost:1433;databaseName=Ass_Java4"
-                               user="sa"
-                               password="123"
-                               var="con"/>
-
-            <c:if test="${not empty param.txt1User}">
-                <sql:update dataSource="${con}">
-                    Insert Into Users(UserName,Password,Ten,SDT,Permission) Values(?,?,?,?,?)
-                    <sql:param value="${param.txt1User}"/>
-                    <sql:param value="${param.txt1Pass}"/>
-                    <sql:param value="${param.txt1Name}"/>
-                    <sql:param value="${param.txt1Sdt}"/>
-                    <sql:param value="${param.cbo1Quyen}"/>
-                </sql:update>
-            </c:if>
-
-
-            </table>
-        </div>
-    </center>
-</body>
+        <c:if test="${not empty param.txt1User}">
+            <sql:update dataSource="${con}">
+                Insert Into Users(UserName,Password,Ten,SDT,Permission) Values(?,?,?,?,?)
+                <sql:param value="${param.txt1User}"/>
+                <sql:param value="${param.txt1Pass}"/>
+                <sql:param value="${param.txt1Name}"/>
+                <sql:param value="${param.txt1Sdt}"/>
+                <sql:param value="nv"/>
+            </sql:update>
+        </c:if>
+    </body>
 </html>
 
