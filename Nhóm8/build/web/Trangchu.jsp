@@ -203,15 +203,16 @@
                                         <div class="main-menu">
                                             <nav>
                                                 <ul>
-                                                    <li><a href="index.html">Trang chủ</a></li>
+                                                    <li><a href="Trangchu.jsp">Trang chủ</a></li>
                                                     <li class="active"><a href="#">Giới thiệu</a></li>
-                                                    <li><a href="#">Quản lý</a>
+                                                    <li><a href="#" style="display: ${sessionScope.lg1}">Quản lý</a>
                                                         <ul>
-                                                            <li><a href="shop.html">Quản lý người dùng</a></li>
-                                                            <li><a href="product-details.html">Quản lý sản phẩm</a></li>                                                           
+                                                            <li><a href="Thanhvien.jsp">Quản lý người dùng</a></li>
+                                                            <li><a href="Sanpham.jsp">Quản lý sản phẩm</a></li>                                                           
                                                         </ul>
                                                     </li>
                                                     <li><a href="Controller?btnAction=Giohang">Giỏ hàng</a></li>
+                                                    <li><a href="Trangchu_1.jsp">Đăng xuất</a></li>
                                                 </ul>
                                             </nav>
                                         </div>

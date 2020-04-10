@@ -65,7 +65,7 @@
                     </div>
                     <div class="signup-image">
                         <figure><img src="images/signup-image.jpg" alt="sing up image"></figure>
-                        <a href="Login.jsp" class="signup-image-link">Đã có tài khoản !</a>
+                        <a href="Login.jsp" style="font-weight: bold">Đã có tài khoản !</a>/<a style="font-weight: bold" href="Trangchu_1.jsp">Trang chủ</a>
                     </div>
                 </div>
             </div>

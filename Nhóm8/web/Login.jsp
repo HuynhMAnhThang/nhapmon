@@ -59,7 +59,7 @@
                 <div class="signin-content">
                     <div class="signin-image">
                         <figure><img src="images/signin-image.jpg" alt="sing up image"></figure>
-                        <a href="NewLogin_1.jsp" class="signup-image-link">Tạo tài khoản</a>
+                        <a href="NewLogin_1.jsp" style="font-weight: bold">Tạo tài khoản</a>/<a style="font-weight: bold" href="Trangchu_1.jsp">Trang chủ</a>
                     </div>
 
                     <div class="signin-form">

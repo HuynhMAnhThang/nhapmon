@@ -102,7 +102,7 @@ public final class Login_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <div class=\"signin-content\">\r\n");
       out.write("                    <div class=\"signin-image\">\r\n");
       out.write("                        <figure><img src=\"images/signin-image.jpg\" alt=\"sing up image\"></figure>\r\n");
-      out.write("                        <a href=\"NewLogin_1.jsp\" class=\"signup-image-link\">Tạo tài khoản</a>\r\n");
+      out.write("                        <a href=\"NewLogin_1.jsp\" class=\"signup-image-link\">Tạo tài khoản</a>/<a href=\"Trangchu_1.jsp\">Trang chủ</a>\r\n");
       out.write("                    </div>\r\n");
       out.write("\r\n");
       out.write("                    <div class=\"signin-form\">\r\n");

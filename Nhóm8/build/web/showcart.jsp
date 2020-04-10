@@ -66,62 +66,6 @@
                 }
             }
         </script>
-        <style>
-            body, html {
-                margin: 0;
-                height: auto;
-            }
-            body {
-                width: 100%;
-            }
-            .bodi {
-                padding-left: 20%;
-                padding-right: 20%;
-            }
-            .sp {
-                background-color: white;
-                width: 171px;
-                margin: 20px 5px;
-                padding: 5px 5px 5px 5px;
-            }
-            .spName {
-                text-align: justify;
-                margin: 2px 0px;
-            }
-            .spPrice {
-                color: #ff5722!important;
-                margin: 2px 0px;
-            }
-            .spInfo {
-                text-align: justify;
-                margin: 5px 0px;
-            }
-            .spAdd {
-                font-size: 18px;
-                margin-left: 3px;
-                background: #3f51b5!important;
-                color: white;
-            }
-            nav input[type=text] {
-                width: 130px;
-                box-sizing: border-box;
-                border: 2px solid #ccc;
-                border-radius: 4px;
-                font-size: 16px;
-                background-color: white;
-
-                background-position: 10px 10px; 
-                background-repeat: no-repeat;
-                padding: 12px 20px 12px 40px;
-                -webkit-transition: width 0.4s ease-in-out;
-                transition: width 0.4s ease-in-out;
-            }
-
-            nav input[type=text]:focus {
-                width: 400px;
-            }
-        </style>
-
     </head>
     <body>
         <div class="wrapper">
@@ -336,44 +280,44 @@
                                 <c:set var="shop" value="${sessionScope.SHOP}"/>
                                 <c:if test="${not empty shop}">
                                     <form>
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th>STT</th>
-                                                <th class="product-name">Ảnh</th>
-                                                <th class="product-price">Tên sản phẩm</th>
-                                                <th class="product-name">Giá</th>
-                                                <th class="product-price">Số lượng</th>
-                                                <th class="product-quantity">Tổng tiền</th>
-                                                <th class="product-subtotal">Lựa chọn</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>                                       
-                                            <c:set var="count" value="0"/>
-                                            <c:forEach var="rows" items="${shop}">
-                                                <c:set var="count" value="${count + 1}" />
+                                        <table>
+                                            <thead>
                                                 <tr>
-                                                    <td>${count}</td>
-                                                    <td class="product-thumbnail">
-                                                        <a href="#"><img src="assets/img/cart/4.jpg" alt=""></a>
-                                                    </td>
-                                                    <td class="product-name">
-                                                        ${rows.value.sanpham.name}
-                                                    </td>
-                                                    <td class="product-price"><span class="amount">${rows.value.sanpham.price}</span></td>
-                                                    <td class="product-quantity">
-                                                        <!--                                                        <div class="quantity-range">
-                                                                                                                    <input class="input-text qty text" type="number" step="1" min="0" value="1" title="Qty" size="4">
-                                                                                                                </div>-->
-                                                        ${rows.value.quantity}
-                                                    </td>
-                                                    <td class="product-subtotal">${rows.value.quantity * rows.value.sanpham.price}</td>
-                                                    <td><input type="checkbox" name="rmv"  value="${rows.value.sanpham.code}"/></td>
+                                                    <th>STT</th>
+                                                    <th class="product-name">Ảnh</th>
+                                                    <th class="product-price">Tên sản phẩm</th>
+                                                    <th class="product-name">Giá</th>
+                                                    <th class="product-price">Số lượng</th>
+                                                    <th class="product-quantity">Tổng tiền</th>
+                                                    <th class="product-subtotal">Lựa chọn</th>
                                                 </tr>
-                                            </c:forEach>
-                                        </tbody>
-                                    </table>
-                                </c:if>
+                                            </thead>
+                                            <tbody>                                       
+                                                <c:set var="count" value="0"/>
+                                                <c:forEach var="rows" items="${shop}">
+                                                    <c:set var="count" value="${count + 1}" />
+                                                    <tr>
+                                                        <td>${count}</td>
+                                                        <td class="product-thumbnail">
+                                                            <a href="#"><img src="assets/img/cart/4.jpg" alt=""></a>
+                                                        </td>
+                                                        <td class="product-name">
+                                                            ${rows.value.sanpham.name}
+                                                        </td>
+                                                        <td class="product-price"><span class="amount">${rows.value.sanpham.price}</span></td>
+                                                        <td class="product-quantity">
+                                                            <!--                                                        <div class="quantity-range">
+                                                                                                                        <input class="input-text qty text" type="number" step="1" min="0" value="1" title="Qty" size="4">
+                                                                                                                    </div>-->
+                                                            ${rows.value.quantity}
+                                                        </td>
+                                                        <td class="product-subtotal">${rows.value.quantity * rows.value.sanpham.price}</td>
+                                                        <td><input type="checkbox" name="rmv"  value="${rows.value.sanpham.code}"/></td>
+                                                    </tr>
+                                                </c:forEach>
+                                            </tbody>
+                                        </table>
+                                    </c:if>
                             </div>
                         </div>
                     </div>
@@ -387,13 +331,13 @@
                                 </div>
                                 <div class="update-checkout-cart">
                                     <div class="update-cart">
-<!--                                        <button class="btn-style cr-btn"><span>Xóa</span></button>-->
+                                        <!--                                        <button class="btn-style cr-btn"><span>Xóa</span></button>-->
                                         <input type="submit" value="Remove" name="btnAction" class="btn-style cr-btn"/>
                                     </div>
                                     <div class="update-cart">
-<!--                                        <a class="btn-style cr-btn" href="#">
-                                            <span>Thanh toán</span>
-                                        </a>-->
+                                        <!--                                        <a class="btn-style cr-btn" href="#">
+                                                                                    <span>Thanh toán</span>
+                                                                                </a>-->
                                         <input class="btn-style cr-btn" type="submit" value="Thanh Toan" onclick="thongbao()" name="btnAction"/>
                                     </div>
                                 </div>
@@ -517,16 +461,17 @@
                     </div>
                 </div>
             </footer>
-            <script src="assets/js/vendor/jquery-1.12.0.min.js"></script>
-            <script src="assets/js/popper.js"></script>
-            <script src="assets/js/bootstrap.min.js"></script>
-            <script src="assets/js/isotope.pkgd.min.js"></script>
-            <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-            <script src="assets/js/jquery.counterup.min.js"></script>
-            <script src="assets/js/waypoints.min.js"></script>
+        </div>
+        <script src="assets/js/vendor/jquery-1.12.0.min.js"></script>
+        <script src="assets/js/popper.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="assets/js/jquery.counterup.min.js"></script>
+        <script src="assets/js/waypoints.min.js"></script>
 
-            <script src="assets/js/owl.carousel.min.js"></script>
-            <script src="assets/js/plugins.js"></script>
-            <script src="assets/js/main.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
