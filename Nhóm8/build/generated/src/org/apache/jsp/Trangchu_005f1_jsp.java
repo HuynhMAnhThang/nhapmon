@@ -204,7 +204,7 @@ public final class Trangchu_005f1_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("\r\n");
       out.write("</div>\r\n");
       out.write("\r\n");
-      out.write("        <script>\r\n");
+      out.write("-->        <script>\r\n");
       out.write("function myFunction() {\r\n");
       out.write("var input, filter, table, tr, td, i, txtValue;\r\n");
       out.write("input = document.getElementById(\"myInput\");\r\n");
@@ -223,7 +223,7 @@ public final class Trangchu_005f1_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("    }\r\n");
       out.write("}\r\n");
       out.write("}\r\n");
-      out.write("</script>\r\n");
+      out.write("</script><!--\r\n");
       out.write("<script src=\"https://code.jquery.com/jquery-3.4.1.slim.min.js\" ></script>\r\n");
       out.write("<script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js\" ></script>\r\n");
       out.write("<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js\" ></script>-->\r\n");
@@ -517,7 +517,7 @@ public final class Trangchu_005f1_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("                                            <div class=\"product-action\">\r\n");
       out.write("                                                <form action=\"Controller\">\r\n");
       out.write("                                                    <!--                                                    <a class=\"action-plus-2 p-action-none\" title=\"Add To Cart\" href=\"#\">-->\r\n");
-      out.write("                                                    <input class=\"action-plus-2 p-action-none\" type=\"submit\" name=\"btnAction\" value=\"Add to Cart\">\r\n");
+      out.write("                                                    <input class=\"action-plus-2 p-action-none\" type=\"submit\" name=\"btnAction\" value=\"Them vao gio\">\r\n");
       out.write("                                                    <!--</a>-->\r\n");
       out.write("                                                    <input type=\"hidden\" name=\"txtCode\" value=\"");
       out.print(sp.getCode());
@@ -703,7 +703,6 @@ public final class Trangchu_005f1_jsp extends org.apache.jasper.runtime.HttpJspB
       out.write("        <script src=\"assets/js/imagesloaded.pkgd.min.js\"></script>\r\n");
       out.write("        <script src=\"assets/js/jquery.counterup.min.js\"></script>\r\n");
       out.write("        <script src=\"assets/js/waypoints.min.js\"></script>\r\n");
-      out.write("\r\n");
       out.write("        <script src=\"assets/js/owl.carousel.min.js\"></script>\r\n");
       out.write("        <script src=\"assets/js/plugins.js\"></script>\r\n");
       out.write("        <script src=\"assets/js/main.js\"></script>\r\n");

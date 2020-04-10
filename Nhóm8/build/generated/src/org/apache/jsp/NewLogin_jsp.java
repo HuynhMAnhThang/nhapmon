@@ -3,6 +3,9 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import model.Load;
+import java.util.List;
+import model.LoginBean;
 
 public final class NewLogin_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -11,38 +14,10 @@ public final class NewLogin_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List<String> _jspx_dependants;
 
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_sql_param_value_nobody;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_set_var_value_nobody;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_if_test;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_sql_update_dataSource;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_sql_query_var_dataSource;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_sql_setDataSource_var_user_url_password_driver_nobody;
-
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public java.util.List<String> getDependants() {
     return _jspx_dependants;
-  }
-
-  public void _jspInit() {
-    _jspx_tagPool_sql_param_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_c_forEach_var_items = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_c_set_var_value_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_c_if_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_sql_update_dataSource = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_sql_query_var_dataSource = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_sql_setDataSource_var_user_url_password_driver_nobody = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-  }
-
-  public void _jspDestroy() {
-    _jspx_tagPool_sql_param_value_nobody.release();
-    _jspx_tagPool_c_forEach_var_items.release();
-    _jspx_tagPool_c_set_var_value_nobody.release();
-    _jspx_tagPool_c_if_test.release();
-    _jspx_tagPool_sql_update_dataSource.release();
-    _jspx_tagPool_sql_query_var_dataSource.release();
-    _jspx_tagPool_sql_setDataSource_var_user_url_password_driver_nobody.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -69,156 +44,226 @@ public final class NewLogin_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
-      out.write("<html>\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("<html lang=\"en\">\r\n");
       out.write("    <head>\r\n");
-      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\r\n");
-      out.write("        <link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\r\n");
-      out.write("        <title>JSP Page</title>\r\n");
-      out.write("        <style>\r\n");
-      out.write("            body {\r\n");
-      out.write("                font-family: Arial, Helvetica, sans-serif;\r\n");
-      out.write("                background-color: black;\r\n");
-      out.write("            }\r\n");
-      out.write("\r\n");
-      out.write("            * {\r\n");
-      out.write("                box-sizing: border-box;\r\n");
-      out.write("            }\r\n");
-      out.write("\r\n");
-      out.write("            /* Add padding to containers */\r\n");
-      out.write("            .container {\r\n");
-      out.write("                padding: 16px;\r\n");
-      out.write("                background-color: white;\r\n");
-      out.write("            }\r\n");
-      out.write("\r\n");
-      out.write("            /* Full-width input fields */\r\n");
-      out.write("            input[type=text], input[type=password] {\r\n");
-      out.write("                width: 100%;\r\n");
-      out.write("                padding: 15px;\r\n");
-      out.write("                margin: 5px 0 22px 0;\r\n");
-      out.write("                display: inline-block;\r\n");
-      out.write("                border: none;\r\n");
-      out.write("                background: #f1f1f1;\r\n");
-      out.write("            }\r\n");
-      out.write("\r\n");
-      out.write("            input[type=text]:focus, input[type=password]:focus {\r\n");
-      out.write("                background-color: #ddd;\r\n");
-      out.write("                outline: none;\r\n");
-      out.write("            }\r\n");
-      out.write("\r\n");
-      out.write("            /* Overwrite default styles of hr */\r\n");
-      out.write("            hr {\r\n");
-      out.write("                border: 1px solid #f1f1f1;\r\n");
-      out.write("                margin-bottom: 25px;\r\n");
-      out.write("            }\r\n");
-      out.write("\r\n");
-      out.write("            /* Set a style for the submit button */\r\n");
-      out.write("            .registerbtn {\r\n");
-      out.write("                background-color: #4CAF50;\r\n");
-      out.write("                color: white;\r\n");
-      out.write("                padding: 16px 20px;\r\n");
-      out.write("                margin: 8px 0;\r\n");
-      out.write("                border: none;\r\n");
-      out.write("                cursor: pointer;\r\n");
-      out.write("                width: 100%;\r\n");
-      out.write("                opacity: 0.9;\r\n");
-      out.write("            }\r\n");
-      out.write("\r\n");
-      out.write("            .registerbtn:hover {\r\n");
-      out.write("                opacity: 1;\r\n");
-      out.write("            }\r\n");
-      out.write("\r\n");
-      out.write("            /* Add a blue text color to links */\r\n");
-      out.write("            a {\r\n");
-      out.write("                color: dodgerblue;\r\n");
-      out.write("            }\r\n");
-      out.write("\r\n");
-      out.write("            /* Set a grey background color and center the text of the \"sign in\" section */\r\n");
-      out.write("            .signin {\r\n");
-      out.write("                background-color: #f1f1f1;\r\n");
-      out.write("                text-align: center;\r\n");
-      out.write("            }\r\n");
-      out.write("        </style>\r\n");
+      out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" />\r\n");
+      out.write("        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n");
+      out.write("        <title>Edmin</title>\r\n");
+      out.write("        <link type=\"text/css\" href=\"bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">\r\n");
+      out.write("        <link type=\"text/css\" href=\"bootstrap/css/bootstrap-responsive.min.css\" rel=\"stylesheet\">\r\n");
+      out.write("        <link type=\"text/css\" href=\"css/theme.css\" rel=\"stylesheet\">\r\n");
+      out.write("        <link type=\"text/css\" href=\"images/icons/css/font-awesome.css\" rel=\"stylesheet\">\r\n");
+      out.write("        <link type=\"text/css\" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet'>\r\n");
       out.write("    </head>\r\n");
-      out.write("    <body style=\"background-color: bisque\">\r\n");
-      out.write("    <center>\r\n");
-      out.write("        <div  algin=\"center\" style=\"width:600px\">\r\n");
-      out.write("            <form >\r\n");
+      out.write("    <body>\r\n");
+      out.write("\r\n");
+      out.write("        <div class=\"navbar navbar-fixed-top\">\r\n");
+      out.write("            <div class=\"navbar-inner\">\r\n");
       out.write("                <div class=\"container\">\r\n");
-      out.write("                    <h1 algin=\"center\">Thêm Người Dùng</h1>\r\n");
-      out.write("                    <p>Vui lòng điền vào mẫu này để tạo một tài khoản.</p>\r\n");
-      out.write("                    <hr>\r\n");
+      out.write("                    <a class=\"btn btn-navbar\" data-toggle=\"collapse\" data-target=\".navbar-inverse-collapse\">\r\n");
+      out.write("                        <i class=\"icon-reorder shaded\"></i>\r\n");
+      out.write("                    </a>\r\n");
       out.write("\r\n");
-      out.write("                    <label for=\"email\"><b>UserName</b></label>\r\n");
-      out.write("                    <input type=\"text\" placeholder=\"Enter UserName\" name=\"txt1User\" required>\r\n");
-      out.write("                    <label for=\"psw\"><b>Password</b></label>\r\n");
-      out.write("                    <input type=\"password\" placeholder=\"Enter Password\" name=\"txt1Pass\" required>\r\n");
-      out.write("                    <label for=\"psw\"><b>FullName</b></label>\r\n");
-      out.write("                    <input type=\"text\" placeholder=\"Enter PasswFullNameord\" name=\"txt1Name\" required>\r\n");
-      out.write("                    <label for=\"psw\"><b>NumberPhone</b></label>\r\n");
-      out.write("                    <input type=\"text\" placeholder=\"Enter NumberPhone\" name=\"txt1Sdt\" required>\r\n");
-      out.write("                    <label>Permission</label>\r\n");
-      out.write("                    <select style=\"width: 84%;\" name=\"cbo1Quyen\">\r\n");
-      out.write("                        <option disabled>---Chọn Quyền---</option>\r\n");
-      out.write("                        <option value=\"nv\">Nguời dùng</option>\r\n");
-      out.write("                        <option value=\"admin\">Quản lý</option>\r\n");
-      out.write("                    </select>\r\n");
+      out.write("                    <a class=\"brand\" href=\"index.html\">\r\n");
+      out.write("                        Admin\r\n");
+      out.write("                    </a>\r\n");
       out.write("\r\n");
+      out.write("                    <div class=\"nav-collapse collapse navbar-inverse-collapse\">\r\n");
+      out.write("                        <ul class=\"nav nav-icons\">\r\n");
+      out.write("                            <li class=\"active\"><a href=\"#\">\r\n");
+      out.write("                                    <i class=\"icon-envelope\"></i>\r\n");
+      out.write("                                </a></li>\r\n");
+      out.write("                            <li><a href=\"#\">\r\n");
+      out.write("                                    <i class=\"icon-eye-open\"></i>\r\n");
+      out.write("                                </a></li>\r\n");
+      out.write("                            <li><a href=\"#\">\r\n");
+      out.write("                                    <i class=\"icon-bar-chart\"></i>\r\n");
+      out.write("                                </a></li>\r\n");
+      out.write("                        </ul>\r\n");
       out.write("\r\n");
-      out.write("                    <hr>\r\n");
+      out.write("                        <form class=\"navbar-search pull-left input-append\" action=\"#\">\r\n");
+      out.write("                            <input type=\"text\" class=\"span3\">\r\n");
+      out.write("                            <button class=\"btn\" type=\"button\">\r\n");
+      out.write("                                <i class=\"icon-search\"></i>\r\n");
+      out.write("                            </button>\r\n");
+      out.write("                        </form>\r\n");
       out.write("\r\n");
-      out.write("                    <button type=\"submit\" class=\"registerbtn\">ADD</button>\r\n");
+      out.write("                        <ul class=\"nav pull-right\">\r\n");
+      out.write("<!--                            <li class=\"dropdown\">\r\n");
+      out.write("                                <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Dropdown <b class=\"caret\"></b></a>\r\n");
+      out.write("                                <ul class=\"dropdown-menu\">\r\n");
+      out.write("                                    <li><a href=\"#\">Item No. 1</a></li>\r\n");
+      out.write("\r\n");
+      out.write("                                    <li><a href=\"#\">Don't Click</a></li>\r\n");
+      out.write("                                    <li class=\"divider\"></li>\r\n");
+      out.write("                                    <li class=\"nav-header\">Example Header</li>\r\n");
+      out.write("                                    <li><a href=\"#\">A Separated link</a></li>\r\n");
+      out.write("                                </ul>\r\n");
+      out.write("                            </li>-->\r\n");
+      out.write("\r\n");
+      out.write("                            <li><a href=\"showcart.jsp\">\r\n");
+      out.write("                                    Giỏ hàng\r\n");
+      out.write("                                </a></li>\r\n");
+      out.write("<!--                            <li class=\"nav-user dropdown\">\r\n");
+      out.write("                                <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">\r\n");
+      out.write("                                    <img src=\"images/user.png\" class=\"nav-avatar\" />\r\n");
+      out.write("                                    <b class=\"caret\"></b>\r\n");
+      out.write("                                </a>\r\n");
+      out.write("                                <ul class=\"dropdown-menu\">\r\n");
+      out.write("                                    <li><a href=\"#\">Your Profile</a></li>\r\n");
+      out.write("                                    <li><a href=\"#\">Edit Profile</a></li>\r\n");
+      out.write("                                    <li><a href=\"#\">Account Settings</a></li>\r\n");
+      out.write("                                    <li class=\"divider\"></li>\r\n");
+      out.write("                                    <li><a href=\"#\">Logout</a></li>\r\n");
+      out.write("                                </ul>\r\n");
+      out.write("                            </li>-->\r\n");
+      out.write("                        </ul>\r\n");
+      out.write("                    </div><!-- /.nav-collapse -->\r\n");
       out.write("                </div>\r\n");
+      out.write("            </div><!-- /navbar-inner -->\r\n");
+      out.write("        </div><!-- /navbar -->\r\n");
       out.write("\r\n");
-      out.write("                <div class=\"container signin\">\r\n");
-      out.write("                    <a href=\"Controller?btnAction=Trangchu\">Quay Lại</a>\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("        <div class=\"wrapper\">\r\n");
+      out.write("            <div class=\"container\">\r\n");
+      out.write("                <div class=\"row\">\r\n");
+      out.write("                    <div class=\"span3\">\r\n");
+      out.write("                        <div class=\"sidebar\">\r\n");
+      out.write("\r\n");
+      out.write("                            <ul class=\"widget widget-menu unstyled\">\r\n");
+      out.write("                                <li class=\"active\">\r\n");
+      out.write("                                    <a href=\"Trangchu.jsp\">\r\n");
+      out.write("                                        <i class=\"menu-icon icon-dashboard\"></i>\r\n");
+      out.write("                                        Trang chủ\r\n");
+      out.write("                                    </a>\r\n");
+      out.write("                                </li>\r\n");
+      out.write("                                <li>\r\n");
+      out.write("                                    <a href=\"Thanhvien.jsp\">\r\n");
+      out.write("                                        <i class=\"menu-icon icon-bullhorn\"></i>\r\n");
+      out.write("                                        Quản lý tài khoản\r\n");
+      out.write("                                    </a>\r\n");
+      out.write("                                </li>\r\n");
+      out.write("                                <li>\r\n");
+      out.write("                                    <a href=\"SanPham.jsp\">\r\n");
+      out.write("                                        <i class=\"menu-icon icon-inbox\"></i>\r\n");
+      out.write("                                        Quản lý sản phẩm\r\n");
+      out.write("                                    </a>\r\n");
+      out.write("                                </li>\r\n");
+      out.write("\r\n");
+      out.write("                                <li>\r\n");
+      out.write("                                    <a href=\"#\">\r\n");
+      out.write("                                        <i class=\"menu-icon icon-tasks\"></i>\r\n");
+      out.write("                                        Thông báo\r\n");
+      out.write("                                        <b class=\"label orange pull-right\">19</b>\r\n");
+      out.write("                                    </a>\r\n");
+      out.write("                                </li>\r\n");
+      out.write("                            </ul><!--/.widget-nav-->\r\n");
+      out.write("\r\n");
+      out.write("                            <ul class=\"widget widget-menu unstyled\">\r\n");
+      out.write("                                <li><a href=\"#\"><i class=\"menu-icon icon-bold\"></i> </a></li>\r\n");
+      out.write("                                <li><a href=\"#\"><i class=\"menu-icon icon-book\"></i></a></li>\r\n");
+      out.write("                                <li><a href=\"#\"><i class=\"menu-icon icon-paste\"></i></a></li>\r\n");
+      out.write("                                <li><a href=\"#\"><i class=\"menu-icon icon-table\"></i></a></li>\r\n");
+      out.write("                                <li><a href=\"#\"><i class=\"menu-icon icon-bar-chart\"></i></a></li>\r\n");
+      out.write("                            </ul><!--/.widget-nav-->\r\n");
+      out.write("\r\n");
+      out.write("                            <ul class=\"widget widget-menu unstyled\">\r\n");
+      out.write("                                <li>\r\n");
+      out.write("                                    <a class=\"collapsed\" data-toggle=\"collapse\" href=\"#togglePages\">\r\n");
+      out.write("                                        <i class=\"menu-icon icon-cog\"></i>\r\n");
+      out.write("                                        <i class=\"icon-chevron-down pull-right\"></i><i class=\"icon-chevron-up pull-right\"></i>\r\n");
+      out.write("\r\n");
+      out.write("                                    </a>\r\n");
+      out.write("                                    <ul id=\"togglePages\" class=\"collapse unstyled\">\r\n");
+      out.write("                                        <li>\r\n");
+      out.write("                                            <a href=\"other-login.html\">\r\n");
+      out.write("                                                <i class=\"icon-inbox\"></i>\r\n");
+      out.write("                                                Login\r\n");
+      out.write("                                            </a>\r\n");
+      out.write("                                        </li>\r\n");
+      out.write("                                        <li>\r\n");
+      out.write("                                            <a href=\"other-user-profile.html\">\r\n");
+      out.write("                                                <i class=\"icon-inbox\"></i>\r\n");
+      out.write("                                                Profile\r\n");
+      out.write("                                            </a>\r\n");
+      out.write("                                        </li>\r\n");
+      out.write("                                        <li>\r\n");
+      out.write("                                            <a href=\"other-user-listing.html\">\r\n");
+      out.write("                                                <i class=\"icon-inbox\"></i>\r\n");
+      out.write("                                                All Users\r\n");
+      out.write("                                            </a>\r\n");
+      out.write("                                        </li>\r\n");
+      out.write("                                    </ul>\r\n");
+      out.write("                                </li>\r\n");
+      out.write("\r\n");
+      out.write("                                <li>\r\n");
+      out.write("                                    <a href=\"#\">\r\n");
+      out.write("                                        <i class=\"menu-icon icon-signout\"></i>\r\n");
+      out.write("                                        Logout\r\n");
+      out.write("                                    </a>\r\n");
+      out.write("                                </li>\r\n");
+      out.write("                            </ul>\r\n");
+      out.write("\r\n");
+      out.write("                        </div><!--/.sidebar-->\r\n");
+      out.write("                    </div><!--/.span3-->\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("                    <div class=\"span9\">\r\n");
+      out.write("                        <div class=\"content\">\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("                            <div class=\"module\">\r\n");
+      out.write("                                <div class=\"module-head\">\r\n");
+      out.write("                                    <button class=\"btn btn-info\" style=\"margin-left: 700px;\">\r\n");
+      out.write("                                        <a href=\"NewLogin.jsp\" style=\"color: white\">Thêm thành viên</a>\r\n");
+      out.write("                                    </button>\r\n");
+      out.write("                                </div>\r\n");
+      out.write("                                <div class=\"module-body table\">\r\n");
+      out.write("                                    \r\n");
+      out.write("                                </div>\r\n");
+      out.write("                            </div><!--/.module-->\r\n");
+      out.write("\r\n");
+      out.write("                            <br />\r\n");
+      out.write("\r\n");
+      out.write("                        </div><!--/.content-->\r\n");
+      out.write("                    </div><!--/.span9-->\r\n");
       out.write("                </div>\r\n");
-      out.write("            </form>\r\n");
-      out.write("            <hr>\r\n");
-      out.write("            ");
-      if (_jspx_meth_sql_setDataSource_0(_jspx_page_context))
-        return;
+      out.write("            </div><!--/.container-->\r\n");
+      out.write("                 \r\n");
+      out.write("        </div><!--/.wrapper-->\r\n");
+      out.write("        <!-- Button trigger modal -->       \r\n");
+      out.write("\r\n");
+      out.write("        <!-- Modal -->     \r\n");
+      out.write("        <div class=\"footer\">\r\n");
+      out.write("            <div class=\"container\">\r\n");
       out.write("\r\n");
       out.write("\r\n");
-      out.write("            ");
-      if (_jspx_meth_c_if_0(_jspx_page_context))
-        return;
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("            ");
-      if (_jspx_meth_sql_query_0(_jspx_page_context))
-        return;
-      out.write("\r\n");
-      out.write("\r\n");
-      out.write("            <table border=\"0\" class=\"w3-table w3-striped w3-bordered w3-border\">\r\n");
-      out.write("                <thead class=\"w3-pink\">\r\n");
-      out.write("                    <tr>\r\n");
-      out.write("                        <th>No.</th>\r\n");
-      out.write("                        <th>Username</th>\r\n");
-      out.write("                        <th>Password</th>\r\n");
-      out.write("                        <th>FullName</th>\r\n");
-      out.write("                        <th>NumberPhone</th>\r\n");
-      out.write("                        <th>Permission</th>\r\n");
-      out.write("                    </tr>\r\n");
-      out.write("                </thead>\r\n");
-      out.write("                ");
-      if (_jspx_meth_c_set_0(_jspx_page_context))
-        return;
-      out.write("\r\n");
-      out.write("                ");
-      if (_jspx_meth_c_forEach_0(_jspx_page_context))
-        return;
-      out.write("\r\n");
-      out.write("            </table>\r\n");
+      out.write("                <b class=\"copyright\">&copy; 2014 Edmin - EGrappler.com </b> All rights reserved.\r\n");
+      out.write("            </div>\r\n");
       out.write("        </div>\r\n");
-      out.write("    </center>\r\n");
-      out.write("</body>\r\n");
-      out.write("</html>\r\n");
       out.write("\r\n");
+      out.write("        <script src=\"scripts/jquery-1.9.1.min.js\"></script>\r\n");
+      out.write("        <script src=\"scripts/jquery-ui-1.10.1.custom.min.js\"></script>\r\n");
+      out.write("        <script src=\"bootstrap/js/bootstrap.min.js\"></script>\r\n");
+      out.write("        <script src=\"scripts/datatables/jquery.dataTables.js\"></script>\r\n");
+      out.write("<!--        <script>\r\n");
+      out.write("                                                        $(document).ready(function () {\r\n");
+      out.write("                                                            $('.datatable-1').dataTable();\r\n");
+      out.write("                                                            $('.dataTables_paginate').addClass(\"btn-group datatable-pagination\");\r\n");
+      out.write("                                                            $('.dataTables_paginate > a').wrapInner('<span />');\r\n");
+      out.write("                                                            $('.dataTables_paginate > a:first-child').append('<i class=\"icon-chevron-left shaded\"></i>');\r\n");
+      out.write("                                                            $('.dataTables_paginate > a:last-child').append('<i class=\"icon-chevron-right shaded\"></i>');\r\n");
+      out.write("                                                        });\r\n");
+      out.write("        </script>-->\r\n");
+      out.write("    </body>\r\n");
+      out.write("</html>");
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;
@@ -230,357 +275,5 @@ public final class NewLogin_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
-  }
-
-  private boolean _jspx_meth_sql_setDataSource_0(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  sql:setDataSource
-    org.apache.taglibs.standard.tag.rt.sql.SetDataSourceTag _jspx_th_sql_setDataSource_0 = (org.apache.taglibs.standard.tag.rt.sql.SetDataSourceTag) _jspx_tagPool_sql_setDataSource_var_user_url_password_driver_nobody.get(org.apache.taglibs.standard.tag.rt.sql.SetDataSourceTag.class);
-    _jspx_th_sql_setDataSource_0.setPageContext(_jspx_page_context);
-    _jspx_th_sql_setDataSource_0.setParent(null);
-    _jspx_th_sql_setDataSource_0.setDriver("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-    _jspx_th_sql_setDataSource_0.setUrl("jdbc:sqlserver://localhost:1433;databaseName=Ass_Java4");
-    _jspx_th_sql_setDataSource_0.setUser("sa");
-    _jspx_th_sql_setDataSource_0.setPassword("123");
-    _jspx_th_sql_setDataSource_0.setVar("con");
-    int _jspx_eval_sql_setDataSource_0 = _jspx_th_sql_setDataSource_0.doStartTag();
-    if (_jspx_th_sql_setDataSource_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_sql_setDataSource_var_user_url_password_driver_nobody.reuse(_jspx_th_sql_setDataSource_0);
-      return true;
-    }
-    _jspx_tagPool_sql_setDataSource_var_user_url_password_driver_nobody.reuse(_jspx_th_sql_setDataSource_0);
-    return false;
-  }
-
-  private boolean _jspx_meth_c_if_0(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:if
-    org.apache.taglibs.standard.tag.rt.core.IfTag _jspx_th_c_if_0 = (org.apache.taglibs.standard.tag.rt.core.IfTag) _jspx_tagPool_c_if_test.get(org.apache.taglibs.standard.tag.rt.core.IfTag.class);
-    _jspx_th_c_if_0.setPageContext(_jspx_page_context);
-    _jspx_th_c_if_0.setParent(null);
-    _jspx_th_c_if_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${not empty param.txt1User}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
-    int _jspx_eval_c_if_0 = _jspx_th_c_if_0.doStartTag();
-    if (_jspx_eval_c_if_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      do {
-        out.write("\r\n");
-        out.write("                ");
-        if (_jspx_meth_sql_update_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_if_0, _jspx_page_context))
-          return true;
-        out.write("\r\n");
-        out.write("            ");
-        int evalDoAfterBody = _jspx_th_c_if_0.doAfterBody();
-        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-          break;
-      } while (true);
-    }
-    if (_jspx_th_c_if_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
-      return true;
-    }
-    _jspx_tagPool_c_if_test.reuse(_jspx_th_c_if_0);
-    return false;
-  }
-
-  private boolean _jspx_meth_sql_update_0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_if_0, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  sql:update
-    org.apache.taglibs.standard.tag.rt.sql.UpdateTag _jspx_th_sql_update_0 = (org.apache.taglibs.standard.tag.rt.sql.UpdateTag) _jspx_tagPool_sql_update_dataSource.get(org.apache.taglibs.standard.tag.rt.sql.UpdateTag.class);
-    _jspx_th_sql_update_0.setPageContext(_jspx_page_context);
-    _jspx_th_sql_update_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_if_0);
-    _jspx_th_sql_update_0.setDataSource((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${con}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
-    int[] _jspx_push_body_count_sql_update_0 = new int[] { 0 };
-    try {
-      int _jspx_eval_sql_update_0 = _jspx_th_sql_update_0.doStartTag();
-      if (_jspx_eval_sql_update_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-        if (_jspx_eval_sql_update_0 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.pushBody();
-          _jspx_push_body_count_sql_update_0[0]++;
-          _jspx_th_sql_update_0.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
-          _jspx_th_sql_update_0.doInitBody();
-        }
-        do {
-          out.write("\r\n");
-          out.write("                    Insert Into Users(UserName,Password,Ten,SDT,Permission) Values(?,?,?,?,?)\r\n");
-          out.write("                    ");
-          if (_jspx_meth_sql_param_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_sql_update_0, _jspx_page_context, _jspx_push_body_count_sql_update_0))
-            return true;
-          out.write("\r\n");
-          out.write("                    ");
-          if (_jspx_meth_sql_param_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_sql_update_0, _jspx_page_context, _jspx_push_body_count_sql_update_0))
-            return true;
-          out.write("\r\n");
-          out.write("                    ");
-          if (_jspx_meth_sql_param_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_sql_update_0, _jspx_page_context, _jspx_push_body_count_sql_update_0))
-            return true;
-          out.write("\r\n");
-          out.write("                    ");
-          if (_jspx_meth_sql_param_3((javax.servlet.jsp.tagext.JspTag) _jspx_th_sql_update_0, _jspx_page_context, _jspx_push_body_count_sql_update_0))
-            return true;
-          out.write("\r\n");
-          out.write("                    ");
-          if (_jspx_meth_sql_param_4((javax.servlet.jsp.tagext.JspTag) _jspx_th_sql_update_0, _jspx_page_context, _jspx_push_body_count_sql_update_0))
-            return true;
-          out.write("\r\n");
-          out.write("                ");
-          int evalDoAfterBody = _jspx_th_sql_update_0.doAfterBody();
-          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-            break;
-        } while (true);
-        if (_jspx_eval_sql_update_0 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE)
-          out = _jspx_page_context.popBody();
-          _jspx_push_body_count_sql_update_0[0]--;
-      }
-      if (_jspx_th_sql_update_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } catch (Throwable _jspx_exception) {
-      while (_jspx_push_body_count_sql_update_0[0]-- > 0)
-        out = _jspx_page_context.popBody();
-      _jspx_th_sql_update_0.doCatch(_jspx_exception);
-    } finally {
-      _jspx_th_sql_update_0.doFinally();
-      _jspx_tagPool_sql_update_dataSource.reuse(_jspx_th_sql_update_0);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_sql_param_0(javax.servlet.jsp.tagext.JspTag _jspx_th_sql_update_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_sql_update_0)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  sql:param
-    org.apache.taglibs.standard.tag.rt.sql.ParamTag _jspx_th_sql_param_0 = (org.apache.taglibs.standard.tag.rt.sql.ParamTag) _jspx_tagPool_sql_param_value_nobody.get(org.apache.taglibs.standard.tag.rt.sql.ParamTag.class);
-    _jspx_th_sql_param_0.setPageContext(_jspx_page_context);
-    _jspx_th_sql_param_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_sql_update_0);
-    _jspx_th_sql_param_0.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.txt1User}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
-    int _jspx_eval_sql_param_0 = _jspx_th_sql_param_0.doStartTag();
-    if (_jspx_th_sql_param_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_sql_param_value_nobody.reuse(_jspx_th_sql_param_0);
-      return true;
-    }
-    _jspx_tagPool_sql_param_value_nobody.reuse(_jspx_th_sql_param_0);
-    return false;
-  }
-
-  private boolean _jspx_meth_sql_param_1(javax.servlet.jsp.tagext.JspTag _jspx_th_sql_update_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_sql_update_0)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  sql:param
-    org.apache.taglibs.standard.tag.rt.sql.ParamTag _jspx_th_sql_param_1 = (org.apache.taglibs.standard.tag.rt.sql.ParamTag) _jspx_tagPool_sql_param_value_nobody.get(org.apache.taglibs.standard.tag.rt.sql.ParamTag.class);
-    _jspx_th_sql_param_1.setPageContext(_jspx_page_context);
-    _jspx_th_sql_param_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_sql_update_0);
-    _jspx_th_sql_param_1.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.txt1Pass}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
-    int _jspx_eval_sql_param_1 = _jspx_th_sql_param_1.doStartTag();
-    if (_jspx_th_sql_param_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_sql_param_value_nobody.reuse(_jspx_th_sql_param_1);
-      return true;
-    }
-    _jspx_tagPool_sql_param_value_nobody.reuse(_jspx_th_sql_param_1);
-    return false;
-  }
-
-  private boolean _jspx_meth_sql_param_2(javax.servlet.jsp.tagext.JspTag _jspx_th_sql_update_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_sql_update_0)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  sql:param
-    org.apache.taglibs.standard.tag.rt.sql.ParamTag _jspx_th_sql_param_2 = (org.apache.taglibs.standard.tag.rt.sql.ParamTag) _jspx_tagPool_sql_param_value_nobody.get(org.apache.taglibs.standard.tag.rt.sql.ParamTag.class);
-    _jspx_th_sql_param_2.setPageContext(_jspx_page_context);
-    _jspx_th_sql_param_2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_sql_update_0);
-    _jspx_th_sql_param_2.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.txt1Name}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
-    int _jspx_eval_sql_param_2 = _jspx_th_sql_param_2.doStartTag();
-    if (_jspx_th_sql_param_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_sql_param_value_nobody.reuse(_jspx_th_sql_param_2);
-      return true;
-    }
-    _jspx_tagPool_sql_param_value_nobody.reuse(_jspx_th_sql_param_2);
-    return false;
-  }
-
-  private boolean _jspx_meth_sql_param_3(javax.servlet.jsp.tagext.JspTag _jspx_th_sql_update_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_sql_update_0)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  sql:param
-    org.apache.taglibs.standard.tag.rt.sql.ParamTag _jspx_th_sql_param_3 = (org.apache.taglibs.standard.tag.rt.sql.ParamTag) _jspx_tagPool_sql_param_value_nobody.get(org.apache.taglibs.standard.tag.rt.sql.ParamTag.class);
-    _jspx_th_sql_param_3.setPageContext(_jspx_page_context);
-    _jspx_th_sql_param_3.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_sql_update_0);
-    _jspx_th_sql_param_3.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.txt1Sdt}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
-    int _jspx_eval_sql_param_3 = _jspx_th_sql_param_3.doStartTag();
-    if (_jspx_th_sql_param_3.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_sql_param_value_nobody.reuse(_jspx_th_sql_param_3);
-      return true;
-    }
-    _jspx_tagPool_sql_param_value_nobody.reuse(_jspx_th_sql_param_3);
-    return false;
-  }
-
-  private boolean _jspx_meth_sql_param_4(javax.servlet.jsp.tagext.JspTag _jspx_th_sql_update_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_sql_update_0)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  sql:param
-    org.apache.taglibs.standard.tag.rt.sql.ParamTag _jspx_th_sql_param_4 = (org.apache.taglibs.standard.tag.rt.sql.ParamTag) _jspx_tagPool_sql_param_value_nobody.get(org.apache.taglibs.standard.tag.rt.sql.ParamTag.class);
-    _jspx_th_sql_param_4.setPageContext(_jspx_page_context);
-    _jspx_th_sql_param_4.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_sql_update_0);
-    _jspx_th_sql_param_4.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${param.cbo1Quyen}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
-    int _jspx_eval_sql_param_4 = _jspx_th_sql_param_4.doStartTag();
-    if (_jspx_th_sql_param_4.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_sql_param_value_nobody.reuse(_jspx_th_sql_param_4);
-      return true;
-    }
-    _jspx_tagPool_sql_param_value_nobody.reuse(_jspx_th_sql_param_4);
-    return false;
-  }
-
-  private boolean _jspx_meth_sql_query_0(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  sql:query
-    org.apache.taglibs.standard.tag.rt.sql.QueryTag _jspx_th_sql_query_0 = (org.apache.taglibs.standard.tag.rt.sql.QueryTag) _jspx_tagPool_sql_query_var_dataSource.get(org.apache.taglibs.standard.tag.rt.sql.QueryTag.class);
-    _jspx_th_sql_query_0.setPageContext(_jspx_page_context);
-    _jspx_th_sql_query_0.setParent(null);
-    _jspx_th_sql_query_0.setDataSource((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${con}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
-    _jspx_th_sql_query_0.setVar("rs");
-    int[] _jspx_push_body_count_sql_query_0 = new int[] { 0 };
-    try {
-      int _jspx_eval_sql_query_0 = _jspx_th_sql_query_0.doStartTag();
-      if (_jspx_eval_sql_query_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-        if (_jspx_eval_sql_query_0 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE) {
-          out = _jspx_page_context.pushBody();
-          _jspx_push_body_count_sql_query_0[0]++;
-          _jspx_th_sql_query_0.setBodyContent((javax.servlet.jsp.tagext.BodyContent) out);
-          _jspx_th_sql_query_0.doInitBody();
-        }
-        do {
-          out.write("\r\n");
-          out.write("                select * from Users\r\n");
-          out.write("            ");
-          int evalDoAfterBody = _jspx_th_sql_query_0.doAfterBody();
-          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-            break;
-        } while (true);
-        if (_jspx_eval_sql_query_0 != javax.servlet.jsp.tagext.Tag.EVAL_BODY_INCLUDE)
-          out = _jspx_page_context.popBody();
-          _jspx_push_body_count_sql_query_0[0]--;
-      }
-      if (_jspx_th_sql_query_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } catch (Throwable _jspx_exception) {
-      while (_jspx_push_body_count_sql_query_0[0]-- > 0)
-        out = _jspx_page_context.popBody();
-      _jspx_th_sql_query_0.doCatch(_jspx_exception);
-    } finally {
-      _jspx_th_sql_query_0.doFinally();
-      _jspx_tagPool_sql_query_var_dataSource.reuse(_jspx_th_sql_query_0);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_c_set_0(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:set
-    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_set_0 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _jspx_tagPool_c_set_var_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
-    _jspx_th_c_set_0.setPageContext(_jspx_page_context);
-    _jspx_th_c_set_0.setParent(null);
-    _jspx_th_c_set_0.setVar("count");
-    _jspx_th_c_set_0.setValue(new String("0"));
-    int _jspx_eval_c_set_0 = _jspx_th_c_set_0.doStartTag();
-    if (_jspx_th_c_set_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_set_var_value_nobody.reuse(_jspx_th_c_set_0);
-      return true;
-    }
-    _jspx_tagPool_c_set_var_value_nobody.reuse(_jspx_th_c_set_0);
-    return false;
-  }
-
-  private boolean _jspx_meth_c_forEach_0(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:forEach
-    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
-    _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
-    _jspx_th_c_forEach_0.setParent(null);
-    _jspx_th_c_forEach_0.setVar("dong");
-    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${rs.rows}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
-    int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };
-    try {
-      int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
-      if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-        do {
-          out.write("\r\n");
-          out.write("                    <tr>\r\n");
-          out.write("                        ");
-          if (_jspx_meth_c_set_1((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
-            return true;
-          out.write("\r\n");
-          out.write("                        <td>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${count}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</td>\r\n");
-          out.write("                        <td>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${dong.UserName}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</td>\r\n");
-          out.write("                        <td>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${dong.Password}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</td>\r\n");
-          out.write("                        <td>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${dong.Ten}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</td>\r\n");
-          out.write("                        <td>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${dong.SDT}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</td>\r\n");
-          out.write("                        <td>");
-          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${dong.Permission}", java.lang.String.class, (PageContext)_jspx_page_context, null));
-          out.write("</td>\r\n");
-          out.write("                    </tr>\r\n");
-          out.write("                ");
-          int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
-          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-            break;
-        } while (true);
-      }
-      if (_jspx_th_c_forEach_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-        return true;
-      }
-    } catch (Throwable _jspx_exception) {
-      while (_jspx_push_body_count_c_forEach_0[0]-- > 0)
-        out = _jspx_page_context.popBody();
-      _jspx_th_c_forEach_0.doCatch(_jspx_exception);
-    } finally {
-      _jspx_th_c_forEach_0.doFinally();
-      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_0);
-    }
-    return false;
-  }
-
-  private boolean _jspx_meth_c_set_1(javax.servlet.jsp.tagext.JspTag _jspx_th_c_forEach_0, PageContext _jspx_page_context, int[] _jspx_push_body_count_c_forEach_0)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:set
-    org.apache.taglibs.standard.tag.rt.core.SetTag _jspx_th_c_set_1 = (org.apache.taglibs.standard.tag.rt.core.SetTag) _jspx_tagPool_c_set_var_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.SetTag.class);
-    _jspx_th_c_set_1.setPageContext(_jspx_page_context);
-    _jspx_th_c_set_1.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_c_set_1.setVar("count");
-    _jspx_th_c_set_1.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${count+1}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
-    int _jspx_eval_c_set_1 = _jspx_th_c_set_1.doStartTag();
-    if (_jspx_th_c_set_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_set_var_value_nobody.reuse(_jspx_th_c_set_1);
-      return true;
-    }
-    _jspx_tagPool_c_set_var_value_nobody.reuse(_jspx_th_c_set_1);
-    return false;
   }
 }

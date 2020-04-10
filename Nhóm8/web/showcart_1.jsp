@@ -279,9 +279,6 @@
                                                         </td>
                                                         <td class="product-price"><span class="amount">${rows.value.sanpham.price}</span></td>
                                                         <td class="product-quantity">
-                                                            <!--                                                        <div class="quantity-range">
-                                                                                                                        <input class="input-text qty text" type="number" step="1" min="0" value="1" title="Qty" size="4">
-                                                                                                                    </div>-->
                                                             ${rows.value.quantity}
                                                         </td>
                                                         <td class="product-subtotal">${rows.value.quantity * rows.value.sanpham.price}</td>

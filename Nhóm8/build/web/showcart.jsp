@@ -91,12 +91,12 @@
                                         <div class="main-menu">
                                             <nav>
                                                 <ul>
-                                                    <li><a href="Trangchu.jsp">Trang chủ</a></li>
+                                                    <li><a href="Trangchu.jsp" style="display: ${sessionScope.lg1}">Trang chủ</a></li>
                                                     <li class="active"><a href="#">Giới thiệu</a></li>
                                                     <li><a href="#">Quản lý</a>
                                                         <ul>
-                                                            <li><a href="shop.html">Quản lý người dùng</a></li>
-                                                            <li><a href="product-details.html">Quản lý sản phẩm</a></li>                                                           
+                                                            <li><a href="Thanhvien.jsp">Quản lý người dùng</a></li>
+                                                            <li><a href="SanPham.jsp">Quản lý sản phẩm</a></li>                                                           
                                                         </ul>
                                                     </li>
                                                     <li><a href="Controller?btnAction=Giohang">Giỏ hàng</a></li>
@@ -166,33 +166,16 @@
                                 <div class="mobile-menu">
                                     <nav id="mobile-menu-active">
                                         <ul class="menu-overflow">
-                                            <li><a href="index.html">HOME</a></li>
-                                            <li><a href="#">pages</a>
+                                            <li><a href="Trangchu.jsp">Trang chủ</a></li>
+                                            <li class="active"><a href="#">Giới thiệu</a></li>
+                                            <li><a href="#" style="display: ${sessionScope.lg1}">Quản lý</a>
                                                 <ul>
-                                                    <li><a href="about-us.html">about us</a></li>
-                                                    <li><a href="cart.html">cart page</a></li>
-                                                    <li><a href="checkout.html">checkout</a></li>
-                                                    <li><a href="wishlist.html">wishlist</a></li>
-                                                    <li><a href="login-register.html">login</a></li>
-                                                    <li><a href="contact.html">contact</a></li>
+                                                    <li><a href="Thanhvien.jsp">Quản lý người dùng</a></li>
+                                                    <li><a href="SanPham.jsp">Quản lý sản phẩm</a></li>                                                           
                                                 </ul>
                                             </li>
-                                            <li><a href="#">shop</a>
-                                                <ul>
-                                                    <li><a href="shop.html">shop</a></li>
-                                                    <li><a href="product-details.html">product details</a></li>
-                                                    <li><a href="checkout.html">checkout</a></li>
-                                                    <li><a href="wishlist.html">wishlist</a></li>
-                                                    <li><a href="cart.html">cart</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">BLOG</a>
-                                                <ul>
-                                                    <li><a href="blog.html">blog page</a></li>
-                                                    <li><a href="blog-details.html">blog details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html"> Contact us</a></li>
+                                            <li><a href="Controller?btnAction=Giohang">Giỏ hàng</a></li>
+                                            <li><a href="Trangchu_1.jsp">Đăng xuất</a></li>
                                         </ul>
                                     </nav>							
                                 </div>

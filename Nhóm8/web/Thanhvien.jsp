@@ -1,236 +1,317 @@
-<%-- 
-    Document   : Thanhvien
-    Created on : Sep 26, 2019, 6:43:54 PM
-    Author     : msi
---%>
-
+<!DOCTYPE html>
 <%@page import="model.Load"%>
 <%@page import="java.util.List"%>
 <%@page import="model.LoginBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-
-<html>
+<html lang="en">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Trang chủ</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <style>
-            body, html {
-                margin: 0;
-                height: auto;
-            }
-            body {
-                width: 100%;
-            }
-            .bodi {
-                padding-left: 20%;
-                padding-right: 20%;
-            }
-            .sp {
-                background-color: white;
-                width: 171px;
-                margin: 20px 5px;
-                padding: 5px 5px 5px 5px;
-            }
-            .spName {
-                text-align: justify;
-                margin: 2px 0px;
-            }
-            .spPrice {
-                color: #ff5722!important;
-                margin: 2px 0px;
-            }
-            .spInfo {
-                text-align: justify;
-                margin: 5px 0px;
-            }
-            .spAdd {
-                font-size: 18px;
-                margin-left: 3px;
-                background: #3f51b5!important;
-                color: white;
-            }
-            nav input[type=text] {
-                width: 130px;
-                box-sizing: border-box;
-                border: 2px solid #ccc;
-                border-radius: 4px;
-                font-size: 16px;
-                background-color: white;
-
-                background-position: 10px 10px; 
-                background-repeat: no-repeat;
-                padding: 12px 20px 12px 40px;
-                -webkit-transition: width 0.4s ease-in-out;
-                transition: width 0.4s ease-in-out;
-            }
-
-            nav input[type=text]:focus {
-                width: 400px;
-            }
-        </style>
-        <script>
-            function myFunction() {
-                var input, filter, table, tr, td, i, txtValue;
-                input = document.getElementById("myInput");
-                filter = input.value.toUpperCase();
-                table = document.getElementById("myTable");
-                tr = table.getElementsByTagName("tr");
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[0];
-                    if (td) {
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].style.display = "";
-                        } else {
-                            tr[i].style.display = "none";
-                        }
-                    }
-                }
-            }
-        </script>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Edmin</title>
+        <link type="text/css" href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link type="text/css" href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+        <link type="text/css" href="css/theme.css" rel="stylesheet">
+        <link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
+        <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet'>
     </head>
-    <body style="background: #f5f5f5">
-    <center>
-        <div style="width: 1070px" >
-            <form action="Controller" method="post"  algin="center">
-                <header class="w3-row">
-                    <div class="w3-col w3-orange" style="width: 200px; height: 70px; float: left"><button class="w3-button w3-round w3-white" value="Trangchu" name="btnAction" style="margin-top: 18px; margin-left: 30px;"><a href="Controller?btnAction=Trangchu" style="text-decoration: none">Trang chủ</a></button></div>
+    <body>
 
-                    <div class="w3-col w3-orange" style="width: 870px; height: 70px; ">
-                        <div style="padding-top: 18px;float: right">
-                            <font color="white">XIN CHÀO  ${sessionScope.USER}</font>
-                            <button class="w3-button w3-round w3-white" value="Dangnhap" name="btnAction" style=" display: ${sessionScope.log}"><a href="Controller?btnAction=Dangnhap" style="text-decoration: none">Đăng nhập</a></button>
-                            <button class="w3-button w3-round w3-white" value="Thanhvien" name="btnAction" style="display: ${sessionScope.lg1}"><a href="Controller?btnAction=Thanhvien" style="text-decoration: none">Thành viên</a></button>
-                            <button class="w3-button w3-round w3-white" value="Giohang" name="btnAction" style="display: ${sessionScope.lg}"><a href="Controller?btnAction=Giohang" style="text-decoration: none">Giỏ Hàng</a></button>
-                            <button class="w3-button w3-round w3-white" value="Sanpham" name="btnAction" style="display: ${sessionScope.lg1}"><a href="Controller?btnAction=Sanpham" style="text-decoration: none">Sản phẩm</a></button>
-                            <button class="w3-button w3-round w3-white" value="Dangxuat" name="btnAction" style=" display: ${sessionScope.logout}"><a href="Controller?btnAction=Dangxuat" style="text-decoration: none">Đăng xuất</a></button>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                        <i class="icon-reorder shaded"></i>
+                    </a>
 
-                        </div>
-                    </div>
-                </header>
+                    <a class="brand" href="index.html">
+                        Admin
+                    </a>
 
-                <nav style="padding-top: 8px; padding-bottom: 8px; margin: 10px 0px; background-color: white;width: 1070px" class="bodi">
-                    <div class="w3-row">
+                    <div class="nav-collapse collapse navbar-inverse-collapse">
+                        <ul class="nav nav-icons">
+                            <li class="active"><a href="#">
+                                    <i class="icon-envelope"></i>
+                                </a></li>
+                            <li><a href="#">
+                                    <i class="icon-eye-open"></i>
+                                </a></li>
+                            <li><a href="#">
+                                    <i class="icon-bar-chart"></i>
+                                </a></li>
+                        </ul>
 
-                        <div>
+                        <form class="navbar-search pull-left input-append" action="#">
+                            <input type="text" class="span3">
+                            <button class="btn" type="button">
+                                <i class="icon-search"></i>
+                            </button>
+                        </form>
 
-                            <a href="Trangchu.jsp"><img style="float: left; margin-right: 10px; width: 70px; height: 50px" src="img/logo.jpg" ></a>
-                            <input  id="myInput" onkeyup="myFunction()" type="text" placeholder="Seach">
-                            <a href="showcart.jsp">
-                                <span class="fa fa-shopping-cart" style=" width: 38px; height: 38px; font-size: 22px;margin-right: 60px"></span>
-                            </a>
-                        </div>
+                        <ul class="nav pull-right">
+                            <!--                            <li class="dropdown">
+                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="#">Item No. 1</a></li>
+                            
+                                                                <li><a href="#">Don't Click</a></li>
+                                                                <li class="divider"></li>
+                                                                <li class="nav-header">Example Header</li>
+                                                                <li><a href="#">A Separated link</a></li>
+                                                            </ul>
+                                                        </li>-->
 
-                    </div>
-                </nav>
-                <article >
-                    <form action="Controller">
-                        <h2 style="margin: 0px auto">Quản lý thành viên</h2>
-                        <table id="myTable" class="w3-table w3-striped w3-bordered w3-border" border="0" style=" margin: 0 auto">
-                            <thead class="w3-orange">
-                                <tr>
-                                    <th>Tên thành viên</th>
-                                    <th>Chức vụ</th>
-                                    <th>Tên đăng nhập</th>
-                                    <th>Số điện thoại</th>
-                                    <th>Sửa đổi thông tin</th>
-                                    <th>Lựa Chọn</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <%
-                                    LoginBean login = new LoginBean();
-                                    List<Load> list = login.LoadData();
-                                    for (Load ld : list) {
-                                        out.print("<form action=\"Controller\">");
-                                        out.print("<tr>"
-                                                + "<td>" + ld.getName() + "</td>"
-                                                + "<td>" + ld.getUsername() + "</td>"
-                                                + "<td>" + ld.getSdt() + "</td>"
-                                                + "<td>" + ld.getChucvu() + "</td>"
-                                                + "<td>"
-                                                + "<input class=\"w3-btn w3-indigo\" type=\"button\" value=\"Edit\" name=\"btnAction\""
-                                                + " onClick=\"document.getElementById('id01').style.display = 'block'\">"
-                                                + "</td>"
-                                                + "<td><input class=\"w3-button w3-round w3-red\" type=\"submit\""
-                                                + "value=\"X\" name=\"btnAction\" onClick=\"alert('Bạn xoa thành viên thành công')\" /></td>"
-                                                + "<input type=\"hidden\" name=\"txtUser\" value='" + ld.getUsername() + "'>"
-                                                + "</tr>");
-                                        out.print("</form>");
-
-                                    }
-                                %>
-
-
-                            </tbody>
-                        </table>
-                        <br>
-                        <div style=" margin: 0 auto">
-                            <button class="w3-btn w3-orange"><a href="NewLogin.jsp" style="text-decoration: none">Thêm thành viên</a></button>
-                        </div>
+                            <li><a href="showcart.jsp">
+                                    Giỏ hàng
+                                </a>
+                            </li>
+                            <li><a href="Trangchu_1.jsp">
+                                    Đăng xuất
+                                </a>
+                            </li>
+                            <!--                            <li class="nav-user dropdown">
+                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                                <img src="images/user.png" class="nav-avatar" />
+                                                                <b class="caret"></b>
+                                                            </a>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a href="#">Your Profile</a></li>
+                                                                <li><a href="#">Edit Profile</a></li>
+                                                                <li><a href="#">Account Settings</a></li>
+                                                                <li class="divider"></li>
+                                                                <li><a href="#">Logout</a></li>
+                                                            </ul>
+                                                        </li>-->
+                        </ul>
+                    </div><!-- /.nav-collapse -->
+                </div>
+            </div><!-- /navbar-inner -->
+        </div><!-- /navbar -->
 
 
 
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="span3">
+                        <div class="sidebar">
 
-                        <div id="id01" class="w3-modal">
-                            <div class="w3-modal-content">
-                                <div class="w3-container">
-                                    <span onclick="document.getElementById('id01').style.display = 'none'" class="w3-button w3-display-topright">&times;</span>
-                                    <div style="margin-bottom: 20px;">
-                                        <form action="Controller">
-                                            <h2>Editer</h2>
-                                            <div class="w3-row">
-                                                <div class="w3-half">
-                                                    <div>
-                                                        <label>Tên thành viên</label>
-                                                        <input class="control w3-input w3-border w3-light-grey" name="txt2Name" >
-                                                    </div>
-                                                    <br>
-                                                    <div>
-                                                        <label>Tên đăng nhập</label>
-                                                        <input class="control w3-input w3-border w3-light-grey" name="txt2User" >
-                                                    </div>
-                                                    <br>
-                                                    <div>
-                                                        <label>Mật khẩu</label>
-                                                        <input class="control w3-input w3-border w3-light-grey" name="txt2Pass" >
-                                                    </div>
-                                                    <br>
-                                                    <div>
-                                                        <label>Số điện thoại</label>
-                                                        <input class="control w3-input w3-border w3-light-grey" name="txt2Sdt" >
-                                                    </div>
-                                                    <br>
-                                                    <div>
-                                                        <label>Chức vụ</label>
-                                                        <select style="width: 84%;" name="cbo2Quyen" >
-                                                            <option disabled>---Chọn Quyền---</option>
-                                                            <option value="nv">Nhân viên</option>
-                                                            <option value="lon">Quản lý</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="w3-half">
-                                                    <input type="submit" class="w3-btn w3-orange" value="Update" style="width: 300px; margin: 20px 0 20px 70px"  name="btnAction"><br>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
+                            <ul class="widget widget-menu unstyled">
+                                <li class="active">
+                                    <a href="Trangchu.jsp">
+                                        <i class="menu-icon icon-dashboard"></i>
+                                        Trang chủ
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="Thanhvien.jsp">
+                                        <i class="menu-icon icon-bullhorn"></i>
+                                        Quản lý tài khoản
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="SanPham.jsp">
+                                        <i class="menu-icon icon-inbox"></i>
+                                        Quản lý sản phẩm
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <i class="menu-icon icon-tasks"></i>
+                                        Thông báo
+                                        <b class="label orange pull-right">19</b>
+                                    </a>
+                                </li>
+                            </ul><!--/.widget-nav-->
+
+                            <ul class="widget widget-menu unstyled">
+                                <li><a href="#"><i class="menu-icon icon-bold"></i> </a></li>
+                                <li><a href="#"><i class="menu-icon icon-book"></i></a></li>
+                                <li><a href="#"><i class="menu-icon icon-paste"></i></a></li>
+                                <li><a href="#"><i class="menu-icon icon-table"></i></a></li>
+                                <li><a href="#"><i class="menu-icon icon-bar-chart"></i></a></li>
+                            </ul><!--/.widget-nav-->
+
+                            <ul class="widget widget-menu unstyled">
+                                <li>
+                                    <a class="collapsed" data-toggle="collapse" href="#togglePages">
+                                        <i class="menu-icon icon-cog"></i>
+                                        <i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>
+
+                                    </a>
+                                    <ul id="togglePages" class="collapse unstyled">
+                                        <li>
+                                            <a href="other-login.html">
+                                                <i class="icon-inbox"></i>
+                                                Login
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="other-user-profile.html">
+                                                <i class="icon-inbox"></i>
+                                                Profile
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="other-user-listing.html">
+                                                <i class="icon-inbox"></i>
+                                                All Users
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#">
+                                        <i class="menu-icon icon-signout"></i>
+                                        Logout
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div><!--/.sidebar-->
+                    </div><!--/.span3-->
+
+
+                    <div class="span9">
+                        <div class="content">
+
+
+
+                            <div class="module">
+                                <div class="module-head">
+                                    <button class="btn btn-info" style="margin-left: 700px;">
+                                        <a href="NewLogin.jsp" style="color: white">Thêm thành viên</a>
+                                    </button>
                                 </div>
-                            </div>
+                                <div class="module-body table">
+                                    <table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display" width="100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Tên người dùng</th>
+                                                <th>Số điện thoại</th>
+                                                <th>Tên tài khoản</th>                                                
+                                                <th>Chức vụ</th>
+                                                <th>Chức năng</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <%
+                                                LoginBean login = new LoginBean();
+                                                List<Load> list = login.LoadData();
+                                                for (Load ld : list) {%>                              
+                                        <form action="Controller">        
+                                            <tr class="odd gradeX">
+                                                <td><%=ld.getName()%></td>
+                                                <td><%=ld.getChucvu()%></td>
+                                                <td><%=ld.getSdt()%></td>
+                                                <td><%=ld.getUsername()%></td>                                          
+                                                <td>
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                                        Edit
+                                                    </button>
+                                                    <!--                                                    <input type="button" value="Edit" name="btnAction" onclick="document.getElementById('id01').style.display = block">-->
+                                                    <input type="submit" name="btnAction" value="X" onclick="alert('Bạn đã xóa thành viên thành công')">
+                                                </td>
+                                            <input type="hidden" name="txtUser" value="<%=ld.getUsername()%>">
+                                            </tr>
+                                        </form>
+                                        <%}
+                                        %>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Tên người dùng</th>
+                                                <th>Số điện thoại</th>
+                                                <th>Tên tài khoản</th>                                                
+                                                <th>Chức vụ</th>
+                                                <th>Chức năng</th>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div><!--/.module-->
+
+                            <br />
+
+                        </div><!--/.content-->
+                    </div><!--/.span9-->
+                </div>
+            </div><!--/.container-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Cập nhật</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
+                        <form action="Controller">
+                            <div class="w3-row"> 
+                                <div class="w3-half">
+                                    <div>
+                                        <label>Tên thành viên</label>
+                                        <input class="control w3-input w3-border w3-light-grey" name="txt2Name" >
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <label>Tên đăng nhập</label>
+                                        <input class="control w3-input w3-border w3-light-grey" name="txt2User" >
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <label>Mật khẩu</label>
+                                        <input class="control w3-input w3-border w3-light-grey" name="txt2Pass" >
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <label>Số điện thoại</label>
+                                        <input class="control w3-input w3-border w3-light-grey" name="txt2Sdt" >
+                                    </div>
+                                    <br>
+                                    <div>
+                                        <label>Chức vụ</label>
+                                        <select style="width: 84%;" name="cbo2Quyen" >
+                                            <option disabled>---Chọn Quyền---</option>
+                                            <option value="nv">Nhân viên</option>
+                                            <option value="lon">Quản lý</option>
+                                        </select>
+                                    </div>
+                                </div>                          
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <input type="submit" class="btn btn-primary" value="Update" name="btnAction">
+                            </div>
+                        </form>                   
+                    </div>
+                </div>
+            </div>
+        </div><!--/.wrapper-->
+        <!-- Button trigger modal -->       
+
+        <!-- Modal -->     
+        <div class="footer">
+            <div class="container">
 
 
-                    </form>
-
-                </article>
-            </form>   
-
+                <b class="copyright">&copy; 2014 Edmin - EGrappler.com </b> All rights reserved.
+            </div>
         </div>
-    </center>
-</body>
+
+        <script src="scripts/jquery-1.9.1.min.js"></script>
+        <script src="scripts/jquery-ui-1.10.1.custom.min.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="scripts/datatables/jquery.dataTables.js"></script>
+        <script>
+                                                        $(document).ready(function () {
+                                                            $('.datatable-1').dataTable();
+                                                            $('.dataTables_paginate').addClass("btn-group datatable-pagination");
+                                                            $('.dataTables_paginate > a').wrapInner('<span />');
+                                                            $('.dataTables_paginate > a:first-child').append('<i class="icon-chevron-left shaded"></i>');
+                                                            $('.dataTables_paginate > a:last-child').append('<i class="icon-chevron-right shaded"></i>');
+                                                        });
+        </script>
+    </body>
 </html>
