@@ -49,7 +49,7 @@
     <body>
 
 
--->        <script>
+    <script>
 function myFunction() {
 var input, filter, table, tr, td, i, txtValue;
 input = document.getElementById("myInput");
@@ -70,6 +70,7 @@ for (i = 0; i < tr.length; i++) {
 }
 </script>
         <div class="wrapper">
+       
             <header>
                 <div class="header-area transparent-bar ptb-55">
                     <div class="container">

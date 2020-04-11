@@ -63,6 +63,7 @@
                                 <div class="header-contact-menu-wrapper pl-45">
                                     <div class="header-contact">
                                         <p>Tổng đài chăm sóc khách hàng 1900 0091</p>
+                                        <h3>Xin Chào ${sessionScope.USER} <i class="icon-user"></i></h3>
                                     </div>
                                     <div class="menu-wrapper text-center">
                                         <button class="menu-toggle">

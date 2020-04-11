@@ -23,8 +23,8 @@
                         <i class="icon-reorder shaded"></i>
                     </a>
 
-                    <a class="brand" href="index.html">
-                        Admin
+                    <a class="brand" href="Trangchu.jsp">
+                            ${sessionScope.USER}
                     </a>
 
                     <div class="nav-collapse collapse navbar-inverse-collapse">
@@ -103,7 +103,7 @@
                                         <li>
                                             <a href="Thanhvien.jsp">
                                                 <i class="icon-inbox"></i>
-                                                Tất Cả Thành Viên
+                                                Danh Sách Thành Viên
                                             </a>
                                         </li>
                                        
@@ -128,7 +128,7 @@
                                         <li>
                                             <a href="SanPham.jsp">
                                                 <i class="icon-inbox"></i>
-                                                Tất Cả Sản Phẩm
+                                                Danh Sách Sản Phẩm
                                             </a>
                                         </li>
                                        
@@ -173,22 +173,24 @@
                                                 LoginBean login = new LoginBean();
                                                 List<Load> list = login.LoadData();
                                                 for (Load ld : list) {%>                              
-                                        <form action="Controller">        
+                                              
                                             <tr class="odd gradeX">
                                                 <td><%=ld.getName()%></td>
                                                 <td><%=ld.getChucvu()%></td>
                                                 <td><%=ld.getSdt()%></td>
                                                 <td><%=ld.getUsername()%></td>                                          
                                                 <td>
+                                                     <form action="Controller"> 
                                                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                                        Edit
+                                                       <i class="icon-edit"></i>
                                                     </button>
-                                                    <!--                                                    <input type="button" value="Edit" name="btnAction" onclick="document.getElementById('id01').style.display = block">-->
-                                                    <input type="submit" name="btnAction" value="X" onclick="alert('Bạn đã xóa thành viên thành công')">
+                                                    <button class="btn btn-primary" name="btnAction" value="vut" onclick="alert('Bạn đã xóa thành viên thành công')"><i class="icon-remove"></i></button>
+                                                       <input type="hidden" name="txtUser" value="<%=ld.getUsername()%>">
+                                                     </form>
                                                 </td>
-                                            <input type="hidden" name="txtUser" value="<%=ld.getUsername()%>">
+                                          
                                             </tr>
-                                        </form>
+                                      
                                         <%}
                                         %>
                                         </tbody>
@@ -248,14 +250,14 @@
                                         <select style="width: 84%;" name="cbo2Quyen" >
                                             <option disabled>---Chọn Quyền---</option>
                                             <option value="nv">Nhân viên</option>
-                                            <option value="lon">Quản lý</option>
+                                            <option value="admin">Quản lý</option>
                                         </select>
                                     </div>
                                 </div>                          
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <input type="submit" class="btn btn-primary" value="Update" name="btnAction">
+                                <button type="submit" class="btn btn-info" value="Update" name="btnAction" >Update<i class="icon-edit"></i></button>
                             </div>
                         </form>                   
                     </div>

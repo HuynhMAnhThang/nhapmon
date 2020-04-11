@@ -25,8 +25,8 @@
                         <i class="icon-reorder shaded"></i>
                     </a>
 
-                    <a class="brand" href="index.html">
-                        Admin
+                    <a class="brand" href="Trangchu.jsp">
+                     ${sessionScope.USER}
                     </a>
 
                     <div class="nav-collapse collapse navbar-inverse-collapse">
@@ -102,7 +102,7 @@
                                         <li>
                                             <a href="Thanhvien.jsp">
                                                 <i class="icon-inbox"></i>
-                                                Tất Cả Thành Viên
+                                                Danh Sách Thành Viên
                                             </a>
                                         </li>
                                        
@@ -127,7 +127,7 @@
                                         <li>
                                             <a href="SanPham.jsp">
                                                 <i class="icon-inbox"></i>
-                                                Tất Cả Sản Phẩm
+                                                Danh Sách Sản Phẩm
                                             </a>
                                         </li>
                                        

@@ -32,8 +32,8 @@
                         <i class="icon-reorder shaded"></i>
                     </a>
 
-                    <a class="brand" href="index.html">
-                        Admin
+                    <a class="brand" href="Trangchu.jsp">
+                           ${sessionScope.USER}
                     </a>
 
                     <div class="nav-collapse collapse navbar-inverse-collapse">
@@ -111,7 +111,7 @@
                                         <li>
                                             <a href="Thanhvien.jsp">
                                                 <i class="icon-inbox"></i>
-                                                Tất Cả Thành Viên
+                                                Danh Sách Thành Viên
                                             </a>
                                         </li>
                                        
@@ -136,7 +136,7 @@
                                         <li>
                                             <a href="SanPham.jsp">
                                                 <i class="icon-inbox"></i>
-                                                Tất Cả Sản Phẩm
+                                                Danh Sách Sản Phẩm
                                             </a>
                                         </li>
                                        
@@ -188,12 +188,11 @@
                                                 <td><%=sp.getName()%></td>
                                                 <td><%=sp.getPrice()%></td>                                         
                                                 <td>                                                 
-                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                                        Edit
-                                                    </button>
-                                                    <!--                                                    <input type="submit" name="btnAction" value="Delete" onclick="xoa()">-->
                                                     <form action="Controller"> 
-                                                        <button name="btnAction" value="Delete">Xóa</button>
+                                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                                        <i class="icon-edit"></i>
+                                                    </button>
+                                                        <button class="btn btn-primary" name="btnAction" value="Delete" onclick="alert('Bạn đã xóa sản phẩm thành công')"><i class="icon-remove"></i></button>
                                                         <input type="hidden" name="txtCode" value="<%=sp.getCode()%>">
                                                         <input type="hidden" name="txtName" value="<%=sp.getName()%>">
                                                         <input type="hidden" name="txtPrice" value="$<%=sp.getPrice()%>">
@@ -253,8 +252,9 @@
                                 </div>                          
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <input type="submit" class="btn btn-primary" value="SUA" name="btnAction">
+                                <button class="btn btn-default" data-dismiss="modal">Close</button>
+                                <!--<input type="submit" class="btn btn-primary" value="SUA" name="btnAction">-->
+                                <button type="submit" class="btn btn-info" value="SUA" name="btnAction" >Update<i class="icon-edit"></i></button>
                             </div>
                         </form>                   
                     </div>

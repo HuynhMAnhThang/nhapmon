@@ -49,6 +49,7 @@ public class Controller extends HttpServlet {
             if (action.equals("Login")) {
                 String user = request.getParameter("txtUser");
                 String pass = request.getParameter("txtPass");
+               
                 LoginBean login = new LoginBean();
                 login.LoadData();
                 boolean result = login.checkLogin(user, pass);
@@ -57,6 +58,7 @@ public class Controller extends HttpServlet {
                 if (result) {
                     HttpSession session = request.getSession(true);
                     session.setAttribute("USER", user);
+                  
                     session.setAttribute("log", "none");
                     session.setAttribute("logout", "");
                     url = "Trangchu.jsp";
@@ -188,7 +190,7 @@ public class Controller extends HttpServlet {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-            } else if (action.equals("X")) {
+            } else if (action.equals("vut")) {
                 try {
                     String user = request.getParameter("txtUser");
                     LoginBean login = new LoginBean();
