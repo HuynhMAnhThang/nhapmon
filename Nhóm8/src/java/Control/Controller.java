@@ -65,6 +65,7 @@ public class Controller extends HttpServlet {
                     HttpSession session = request.getSession(true);
                     session.setAttribute("lg1", "");
                     session.setAttribute("lg", "");
+                     url = "Thanhvien.jsp";
                 } else if (quyen.equals("nv")) {
                     HttpSession session = request.getSession(true);
                     session.setAttribute("lg1", "none");

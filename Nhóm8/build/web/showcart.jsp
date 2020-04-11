@@ -47,24 +47,7 @@
                 alert("Bạn đã thanh toán thành công");
             }
 
-            function myFunction() {
-                var input, filter, table, tr, td, i, txtValue;
-                input = document.getElementById("myInput");
-                filter = input.value.toUpperCase();
-                table = document.getElementById("myTable");
-                tr = table.getElementsByTagName("tr");
-                for (i = 0; i < tr.length; i++) {
-                    td = tr[i].getElementsByTagName("td")[2];
-                    if (td) {
-                        txtValue = td.textContent || td.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            tr[i].style.display = "";
-                        } else {
-                            tr[i].style.display = "none";
-                        }
-                    }
-                }
-            }
+
         </script>
     </head>
     <body>
@@ -91,15 +74,16 @@
                                         <div class="main-menu">
                                             <nav>
                                                 <ul>
-                                                    <li><a href="Trangchu.jsp" style="display: ${sessionScope.lg1}">Trang chủ</a></li>
+                                                    <li><a href="Trangchu.jsp">Trang chủ</a></li>
                                                     <li class="active"><a href="#">Giới thiệu</a></li>
-                                                    <li><a href="#">Quản lý</a>
+                                                    <li><a href="#" style="display: ${sessionScope.lg1}">Quản lý</a>
                                                         <ul>
                                                             <li><a href="Thanhvien.jsp">Quản lý người dùng</a></li>
                                                             <li><a href="SanPham.jsp">Quản lý sản phẩm</a></li>                                                           
                                                         </ul>
                                                     </li>
                                                     <li><a href="Controller?btnAction=Giohang">Giỏ hàng</a></li>
+                                                    <li><a href="Trangchu_1.jsp">Đăng xuất</a></li>
                                                 </ul>
                                             </nav>
                                         </div>
@@ -126,32 +110,7 @@
                                                     <a href="#"><i class="icofont icofont-ui-delete"></i></a>
                                                 </div>
                                             </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/img/cart/cart-2.jpg"></a>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h3><a href="#">Demonissi Gori</a></h3>
-                                                    <span>Price: $275</span>
-                                                    <span class="qty">Qty: 01</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="icofont icofont-ui-delete"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/img/cart/cart-3.jpg"></a>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h3><a href="#">Demonissi Gori</a></h3>
-                                                    <span>Price: $275</span>
-                                                    <span class="qty">Qty: 01</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="icofont icofont-ui-delete"></i></a>
-                                                </div>
-                                            </li>
+
                                         </ul>
                                         <div class="shopping-cart-total">
                                             <h4>total: <span>$550.00</span></h4>
@@ -165,7 +124,7 @@
                             <div class="mobile-menu-area col-12">
                                 <div class="mobile-menu">
                                     <nav id="mobile-menu-active">
-                                        <ul class="menu-overflow">
+                                        <ul>
                                             <li><a href="Trangchu.jsp">Trang chủ</a></li>
                                             <li class="active"><a href="#">Giới thiệu</a></li>
                                             <li><a href="#" style="display: ${sessionScope.lg1}">Quản lý</a>
@@ -177,7 +136,7 @@
                                             <li><a href="Controller?btnAction=Giohang">Giỏ hàng</a></li>
                                             <li><a href="Trangchu_1.jsp">Đăng xuất</a></li>
                                         </ul>
-                                    </nav>							
+                                    </nav>						
                                 </div>
                             </div>
                         </div>
@@ -204,7 +163,7 @@
                                             <a href="#"><i class="icofont icofont-ui-delete"></i></a>
                                         </div>
                                     </li>
-                                   
+
                                 </ul>
                                 <div class="shopping-cart-total">
                                     <h4>total: <span>$550.00</span></h4>

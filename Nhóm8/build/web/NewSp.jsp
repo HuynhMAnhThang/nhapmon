@@ -50,11 +50,7 @@
                         </form>
 
                         <ul class="nav pull-right">
-                           
-
-                            <li><a href="showcart.jsp">
-                                    Giỏ hàng
-                                </a></li>
+                        
                             <li><a href="Trangchu_1.jsp">
                                     Đăng xuất
                                 </a></li>
@@ -69,7 +65,7 @@
         <div class="wrapper">
             <div class="container">
                 <div class="row">
-                    <div class="span3">
+        <div class="span3">
                         <div class="sidebar">
 
                             <ul class="widget widget-menu unstyled">
@@ -79,19 +75,7 @@
                                         Trang chủ
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="Thanhvien.jsp">
-                                        <i class="menu-icon icon-bullhorn"></i>
-                                        Quản lý tài khoản
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="SanPham.jsp">
-                                        <i class="menu-icon icon-inbox"></i>
-                                        Quản lý sản phẩm
-                                    </a>
-                                </li>
-
+                               
                                 <li>
                                     <a href="#">
                                         <i class="menu-icon icon-tasks"></i>
@@ -102,39 +86,51 @@
                             </ul><!--/.widget-nav-->
 
                             <ul class="widget widget-menu unstyled">
-                                <li><a href="#"><i class="menu-icon icon-bold"></i> </a></li>
-                                <li><a href="#"><i class="menu-icon icon-book"></i></a></li>
-                                <li><a href="#"><i class="menu-icon icon-paste"></i></a></li>
-                                <li><a href="#"><i class="menu-icon icon-table"></i></a></li>
-                                <li><a href="#"><i class="menu-icon icon-bar-chart"></i></a></li>
+                              <li>
+                                    <a class="collapsed" data-toggle="collapse" href="#togglePages1">
+                                        <i class="menu-icon icon-cog"></i>
+                                         Quản lý Thành viên
+                                        <i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>                                        
+                                    </a>
+                                    <ul id="togglePages1" class="collapse unstyled">
+                                        <li>
+                                            <a href="NewLogin.jsp">
+                                                <i class="icon-inbox"></i>
+                                                Thêm Thành Viên
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="Thanhvien.jsp">
+                                                <i class="icon-inbox"></i>
+                                                Tất Cả Thành Viên
+                                            </a>
+                                        </li>
+                                       
+                                    </ul>
+                                </li>
                             </ul><!--/.widget-nav-->
 
                             <ul class="widget widget-menu unstyled">
                                 <li>
                                     <a class="collapsed" data-toggle="collapse" href="#togglePages">
                                         <i class="menu-icon icon-cog"></i>
-                                        <i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>
-
+                                         Quản lý sản phẩm
+                                        <i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>                                        
                                     </a>
                                     <ul id="togglePages" class="collapse unstyled">
                                         <li>
-                                            <a href="other-login.html">
+                                            <a href="NewSp.jsp">
                                                 <i class="icon-inbox"></i>
-                                                Login
+                                                Thêm Sản Phẩm
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="other-user-profile.html">
+                                            <a href="SanPham.jsp">
                                                 <i class="icon-inbox"></i>
-                                                Profile
+                                                Tất Cả Sản Phẩm
                                             </a>
                                         </li>
-                                        <li>
-                                            <a href="other-user-listing.html">
-                                                <i class="icon-inbox"></i>
-                                                All Users
-                                            </a>
-                                        </li>
+                                       
                                     </ul>
                                 </li>
 
@@ -148,8 +144,6 @@
 
                         </div><!--/.sidebar-->
                     </div><!--/.span3-->
-
-
                     <div class="span9">
                         <div class="content">
 
