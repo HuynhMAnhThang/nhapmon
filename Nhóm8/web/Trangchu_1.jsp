@@ -29,61 +29,6 @@
         <link rel="stylesheet" href="assets/css/responsive.css">
         <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 
-        <!--        <style>
-                    body, html {
-                        margin: 0;
-                        height: auto;
-                    }
-                    body {
-                        width: 100%;
-                    }
-                    .bodi {
-                        padding-left: 20%;
-                        padding-right: 20%;
-                    }
-                    .sp {
-                        background-color: white;
-                        width: 171px;
-                        margin: 20px 5px;
-                        padding: 5px 5px 5px 5px;
-                    }
-                    .spName {
-                        text-align: justify;
-                        margin: 2px 0px;
-                    }
-                    .spPrice {
-                        color: #ff5722!important;
-                        margin: 2px 0px;
-                    }
-                    .spInfo {
-                        text-align: justify;
-                        margin: 5px 0px;
-                    }
-                    .spAdd {
-                        font-size: 18px;
-                        margin-left: 3px;
-                        background: #3f51b5!important;
-                        color: white;
-                    }
-                    nav input[type=text] {
-                        width: 130px;
-                        box-sizing: border-box;
-                        border: 2px solid #ccc;
-                        border-radius: 4px;
-                        font-size: 16px;
-                        background-color: white;
-        
-                        background-position: 10px 10px; 
-                        background-repeat: no-repeat;
-                        padding: 12px 20px 12px 40px;
-                        -webkit-transition: width 0.4s ease-in-out;
-                        transition: width 0.4s ease-in-out;
-                    }
-        
-                    nav input[type=text]:focus {
-                        width: 400px;
-                    }
-                </style>-->
         <style>
             .product-area pb-190{
                 padding-top: 100px;
@@ -103,53 +48,6 @@
     </head>
     <body>
 
-        <!--        <div style="width: 1070px" class="container">
-                    <form action="Controller" method="post"  algin="center">
-        
-        
-                        <div class="w3-col w3-orange" style="width: 1070px; height: 70px; ">
-        
-                            <div class="d-flex mb-3 pd-5 justify-content-between">
-        
-                                <button class="w3-button w3-round w3-white" value="Dangnhap" name="btnAction" style=" display: ${sessionScope.log}"><a href="Controller?btnAction=Dangnhap" style="text-decoration: none">Đăng nhập</a></button>
-                                <button class="w3-button w3-round w3-white" value="Dangky" name="btnAction" style=" display: ${sessionScope.logout}"><a href="NewLogin_1.jsp" style="text-decoration: none">Đăng Ký</a></button>
-                                <button class="w3-button w3-round w3-white" value="Giohanga" name="btnAction" style="display: ${sessionScope.lg}"><a href="Controller?btnAction=Giohanga" style="text-decoration: none">Giỏ Hàng</a></button>
-                            </div>
-                        </div>
-                        </header>
-                        <nav style="padding-top: 8px; padding-bottom: 8px; margin: 10px 0px; background-color: white;width: 1070px" class="bodi">
-                            <div class="w3-row">
-        
-                                <div>
-        
-                                    <a href="Trangchu_1.jsp"><img style="float: left; margin-right: 10px; width: 70px; height: 50px" src="img/logo.jpg" ></a>
-                                    <input  id="myInput" onkeyup="myFunction()" type="text" placeholder="Seach">
-                                    <a href="showcart_1.jsp">
-                                        <span class="fa fa-shopping-cart" style=" width: 38px; height: 38px; font-size: 22px;margin-right: 60px"></span>
-                                    </a>
-                                </div>
-        
-                            </div>
-                        </nav>
-                        <article >
-                            <div style="font-size: 22px">
-                                <center> <h1>DANH SÁCH SẢN PHẨM</h1></center>
-                            </div>
-                            <table id="myTable" class="w3-table w3-striped w3-bordered w3-border" border="0" style=" margin: 0 auto"  >
-                                <thead class="w3-orange">
-                                    <tr>
-                                        <th>Mã Sản Phẩm</th>
-                                        <th>Tên Sản Phẩm</th>
-                                        <th>Giá  </th>
-                                        <th>Thêm giỏ hàng</th>
-                                    </tr>
-                                </thead>
-    </table>
-
-</article>
-</form>    
-
-</div>
 
 -->        <script>
 function myFunction() {
@@ -170,10 +68,7 @@ for (i = 0; i < tr.length; i++) {
     }
 }
 }
-</script><!--
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" ></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" ></script>-->
+</script>
         <div class="wrapper">
             <header>
                 <div class="header-area transparent-bar ptb-55">
@@ -181,7 +76,7 @@ for (i = 0; i < tr.length; i++) {
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-4">
                                 <div class="logo-small-device">
-                                    <a href="index.html"><img alt="" src="assets/img/logo/logo.png"></a>
+                                    <a href="Trangchu.jsp"><img alt="" src="assets/img/logo/logo.png"  width="100px" height="35px"></a>
                                 </div>
                             </div>
                             <div class="col-lg-8 col-md-8 col-8">
@@ -215,7 +110,7 @@ for (i = 0; i < tr.length; i++) {
                                         <ul>
                                             <li class="single-shopping-cart">
                                                 <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/img/cart/cart-1.jpg"></a>
+                                                    <a href="#"><img alt="" src="assets/img/cart/cart-1.jpg" width="80px" height="80px"></a>
                                                 </div>
                                                 <div class="shopping-cart-title">
                                                     <h3><a href="#">Gloriori GSX 250 R </a></h3>
@@ -226,32 +121,7 @@ for (i = 0; i < tr.length; i++) {
                                                     <a href="#"><i class="icofont icofont-ui-delete"></i></a>
                                                 </div>
                                             </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/img/cart/cart-2.jpg"></a>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h3><a href="#">Demonissi Gori</a></h3>
-                                                    <span>Price: $275</span>
-                                                    <span class="qty">Qty: 01</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="icofont icofont-ui-delete"></i></a>
-                                                </div>
-                                            </li>
-                                            <li class="single-shopping-cart">
-                                                <div class="shopping-cart-img">
-                                                    <a href="#"><img alt="" src="assets/img/cart/cart-3.jpg"></a>
-                                                </div>
-                                                <div class="shopping-cart-title">
-                                                    <h3><a href="#">Demonissi Gori</a></h3>
-                                                    <span>Price: $275</span>
-                                                    <span class="qty">Qty: 01</span>
-                                                </div>
-                                                <div class="shopping-cart-delete">
-                                                    <a href="#"><i class="icofont icofont-ui-delete"></i></a>
-                                                </div>
-                                            </li>
+                                          
                                         </ul>
                                         <div class="shopping-cart-total">
                                             <h4>total: <span>$550.00</span></h4>
@@ -266,7 +136,7 @@ for (i = 0; i < tr.length; i++) {
                                 <div class="mobile-menu">
                                     <nav id="mobile-menu-active">
                                         <ul class="menu-overflow">
-                                            <li><a href="index.html">HOME</a></li>
+                                            <li><a href="Trangchu.jsp">HOME</a></li>
                                             <li><a href="#">pages</a>
                                                 <ul>
                                                     <li><a href="about-us.html">about us</a></li>
@@ -314,7 +184,7 @@ for (i = 0; i < tr.length; i++) {
 
                                         <li class="single-shopping-cart">
                                             <div class="shopping-cart-img">
-                                                <a href="#"><img alt="" src="assets/img/cart/cart-1.jpg"></a>
+                                                <a href="#"><img alt="" src="assets/img/cart/cart-1.jpg" width="80px" height="80px"></a>
                                             </div>
                                             <div class="shopping-cart-title">
                                                 <h3><a href="#">${rows.value.sanpham.name}</a></h3>
@@ -346,13 +216,13 @@ for (i = 0; i < tr.length; i++) {
                         <div class="container">
                             <div class="slider-content slider-animated-1">
                                 <div class="slider-img text-center">
-                                    <img class="animated" src="assets/img/slider/bike-1.png" alt="slider images">
+                                    <img class="animated" src="assets/img/slider/bike-1.png" alt="slider images" width="750px"  height="550px">
                                 </div>
                                 <div class="slider-text-img">
-                                    <h6 class="animated">BOOK YOUR BIKE INSTANTLY AND ENJOY DISCOUNT</h6>
+                                    <h6 class="animated">XẾ ĐẸP HÀNG ĐẦU THẾ GIỚI</h6>
                                     <img class="animated" src="assets/img/icon-img/bike.png" alt="slider images">
                                 </div>
-                                <h2 class="animated">MOTORCYCLE</h2>
+                                  <h2 class="animated" style="margin-bottom: 10px;">LUXURY CAR</h2>
                             </div>
                         </div>
                     </div>
@@ -360,13 +230,13 @@ for (i = 0; i < tr.length; i++) {
                         <div class="container">
                             <div class="slider-content slider-animated-1">
                                 <div class="slider-img text-center">
-                                    <img class="animated" src="assets/img/slider/bike-2.png" alt="slider images">
+                                    <img class="animated" src="assets/img/slider/bike-2.png" alt="slider images" width="750px"  height="550px">
                                 </div>
                                 <div class="slider-text-img">
-                                    <h6 class="animated">BOOK YOUR BIKE INSTANTLY AND ENJOY DISCOUNT</h6>
+                                    <h6 class="animated">XẾ ĐẸP HÀNG ĐẦU THẾ GIỚI</h6>
                                     <img class="animated" src="assets/img/icon-img/bike.png" alt="slider images">
                                 </div>
-                                <h2 class="animated">MOTORCYCLE</h2>
+                                  <h2 class="animated" style="margin-bottom: 10px;">LUXURY CAR</h2>
                             </div>
                         </div>
                     </div>
@@ -374,13 +244,13 @@ for (i = 0; i < tr.length; i++) {
                         <div class="container">
                             <div class="slider-content slider-animated-1">
                                 <div class="slider-img text-center">
-                                    <img class="animated" src="assets/img/slider/bike-1.png" alt="slider images">
+                                    <img class="animated" src="assets/img/slider/bike.png" alt="slider images" width="750px"  height="550px">
                                 </div>
                                 <div class="slider-text-img">
-                                    <h6 class="animated">BOOK YOUR BIKE INSTANTLY AND ENJOY DISCOUNT</h6>
+                                    <h6 class="animated">XẾ ĐẸP HÀNG ĐẦU THẾ GIỚI</h6>
                                     <img class="animated" src="assets/img/icon-img/bike.png" alt="slider images">
                                 </div>
-                                <h2 class="animated">MOTORCYCLE</h2>
+                                <h2 class="animated" style="margin-bottom: 10px;">LUXURY CAR</h2>
                             </div>
                         </div>
                     </div>
@@ -610,6 +480,120 @@ for (i = 0; i < tr.length; i++) {
                 </div>
             </div>
         </div>
+             <footer>
+                <div class="footer-top pt-210 pb-98 theme-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="footer-widget mb-30">
+                                    <div class="footer-logo">
+                                        <a href="Trangchu.jsp">
+                                            <img src="assets/img/logo/2.png" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="footer-about">
+                                        <p><span>OSWAN</span> the most latgest bike store in the wold can serve you latest ulity of motorcycle soucan sell here your motorcycle it quo </p>
+                                        <div class="footer-support">
+                                            <h5>FOR SUPPORT</h5>
+                                            <span> 01245 658 698 (Toll Free)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="footer-widget mb-30 pl-60">
+                                    <div class="footer-widget-title">
+                                        <h3>QUICK LINK</h3>
+                                    </div>
+                                    <div class="quick-links">
+                                        <ul>
+                                            <li><a href="about-us.html">About us</a></li>
+                                            <li><a href="#">Service</a></li>
+                                            <li><a href="#">Inventory</a></li>
+                                            <li><a href="shop.html">Shop</a></li>
+                                            <li><a href="blog-sidebar.html">Blog</a></li>
+                                            <li><a href="#">Conditions</a></li>
+                                            <li><a href="contact.html">Contact</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="footer-widget mb-30">
+                                    <div class="footer-widget-title">
+                                        <h3>LATEST TWEET</h3>
+                                    </div>
+                                    <div class="food-widget-content pr-30">
+                                        <div class="single-tweet">
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 
+                                                10 min ago</p>
+                                        </div>
+                                        <div class="single-tweet">
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 
+                                                10 min ago</p>
+                                        </div>
+                                        <div class="single-tweet">
+                                            <p><a href="#">@Smith,</a> the most latgest bike store in the wold can serve you 
+                                                10 min ago</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-12">
+                                <div class="footer-widget mb-30">
+                                    <div class="footer-widget-title">
+                                        <h3>CONTACT INFO</h3>
+                                    </div>
+                                    <div class="food-info-wrapper">
+                                        <div class="food-address">
+                                            <div class="food-info-title">
+                                                <span>Address</span>
+                                            </div>
+                                            <div class="food-info-content">
+                                                <p>276 Jhilli Nogor, 4th folor, Momen Tower, Main Town, New Yourk</p>
+                                            </div>
+                                        </div>
+                                        <div class="food-address">
+                                            <div class="food-info-title">
+                                                <span>Phone</span>
+                                            </div>
+                                            <div class="food-info-content">
+                                                <p>+090 12568 369 987</p>
+                                                <p>+090 12568 369 987</p>
+                                            </div>
+                                        </div>
+                                        <div class="food-address">
+                                            <div class="food-info-title">
+                                                <span>Web</span>
+                                            </div>
+                                            <div class="food-info-content">
+                                                <a href="#">info@oswanmega.com</a>
+                                                <a href="#">www.oswanmega.com</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom ptb-35 black-bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 col-12">
+                                <div class="copyright">
+                                    <p>©Copyright, 2018 All Rights Reserved by <a href="https://freethemescloud.com/">HuynhThang-AnhDuc</a></p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-12">
+                                <div class="footer-payment-method">
+                                    <a href="#"><img alt="" src="assets/img/icon-img/payment.png"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         <!-- all js here -->
         <script src="assets/js/vendor/jquery-1.12.0.min.js"></script>
         <script src="assets/js/popper.js"></script>

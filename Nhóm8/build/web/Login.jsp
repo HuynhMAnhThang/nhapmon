@@ -25,35 +25,7 @@
         </style>
     </head>
     <body>
-<!--                <div align="center" >
-        
-                    <form action="Controller" method="post" style="width: 600px;background-color: azure;"  >
-                        <div class="imgcontainer">
-                            <h1>Login</h1>
-                            <img src="img/logo.jpg" alt="Avatar" class="avatar">
-                        </div>
-        
-                        <div class="container">
-                            <label for="uname"><b>Username</b></label>
-                            <input type="text" placeholder="Enter Username" name="txtUser" required>
-        
-                            <label for="psw"><b>Password</b></label>
-                            <input type="password" placeholder="Enter Password" name="txtPass" required>
-        
-        
-                            <button type="submit" name="btnAction"  value="Login" style="padding-top: 7px;padding-bottom: 20px;" >Login</button>
-                            <a href="NewLogin_1.jsp"><button type="button" name="btnAction"  value="Dangky" style="padding-top: 7px;padding-bottom: 20px;">Registration</button></a>
-                            <label>
-                                <input type="checkbox" checked="checked" name="remember"> Rememberme
-                            </label>
-                        </div>
-        
-                        <div class="container" style="background-color:#f1f1f1">
-                            <button type="button" class="cancelbtn" style="padding-bottom: 22px;padding-top: 8px;"> <a href="#">Cancel</a></button>
-                            <span class="psw">Forgot <a href="#">password?</a></span>
-                        </div>
-                    </form>
-                </div>-->
+
         <section class="sign-in">
             <div class="container">
                 <div class="signin-content">

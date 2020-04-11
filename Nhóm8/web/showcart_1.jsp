@@ -76,7 +76,7 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-4">
                                 <div class="logo-small-device">
-                                    <a href="index.html"><img alt="" src="assets/img/logo/logo.png"></a>
+                                    <a href="Trangchu.jsp"><img alt="" src="aassets/img/banner/banner-4.jpg"  width="100px" height="35px"></a>
                                 </div>
                             </div>
                             <div class="col-lg-8 col-md-8 col-8">
@@ -232,7 +232,7 @@
                     </div>
                 </div>
             </header>
-            <div class="breadcrumb-area pt-255 pb-170" style="background-image: url(assets/img/banner/banner-4.jpg)">
+            <div class="breadcrumb-area pt-255 pb-170" style="background-image: url(assets/img/banner/banner-4.jpg);min-width:1000px">
                 <div class="container-fluid">
                     <div class="breadcrumb-content text-center">
                         <h2>Trang giỏ hàng</h2>
@@ -272,7 +272,7 @@
                                                     <tr>
                                                         <td>${count}</td>
                                                         <td class="product-thumbnail">
-                                                            <a href="#"><img src="assets/img/cart/4.jpg" alt=""></a>
+                                                            <a href="#"><img src="assets/img/cart/cart-1.jpg" width="120x" height="150px" alt=""></a>
                                                         </td>
                                                         <td class="product-name">
                                                             ${rows.value.sanpham.name}
@@ -324,7 +324,7 @@
                             <div class="col-lg-3 col-md-6 col-12">
                                 <div class="footer-widget mb-30">
                                     <div class="footer-logo">
-                                        <a href="index.html">
+                                        <a href="Trangchu.jsp">
                                             <img src="assets/img/logo/2.png" alt="">
                                         </a>
                                     </div>
@@ -419,7 +419,7 @@
                         <div class="row">
                             <div class="col-md-8 col-12">
                                 <div class="copyright">
-                                    <p>©Copyright, 2018 All Rights Reserved by <a href="https://freethemescloud.com/">Free themes Cloud</a></p>
+                                    <p>©Copyright, 2018 All Rights Reserved by <a href="https://freethemescloud.com/">HuynhThang-AnhDuc</a></p>
                                 </div>
                             </div>
                             <div class="col-md-4 col-12">

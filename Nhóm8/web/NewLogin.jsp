@@ -50,17 +50,7 @@
                         </form>
 
                         <ul class="nav pull-right">
-                            <!--                            <li class="dropdown">
-                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                                                            <ul class="dropdown-menu">
-                                                                <li><a href="#">Item No. 1</a></li>
-                            
-                                                                <li><a href="#">Don't Click</a></li>
-                                                                <li class="divider"></li>
-                                                                <li class="nav-header">Example Header</li>
-                                                                <li><a href="#">A Separated link</a></li>
-                                                            </ul>
-                                                        </li>-->
+                         
 
                             <li><a href="showcart.jsp">
                                     Giỏ hàng
@@ -68,19 +58,7 @@
                             <li><a href="Trangchu_1.jsp">
                                     Đăng xuất
                             </a></li>
-                            <!--                            <li class="nav-user dropdown">
-                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                                                <img src="images/user.png" class="nav-avatar" />
-                                                                <b class="caret"></b>
-                                                            </a>
-                                                            <ul class="dropdown-menu">
-                                                                <li><a href="#">Your Profile</a></li>
-                                                                <li><a href="#">Edit Profile</a></li>
-                                                                <li><a href="#">Account Settings</a></li>
-                                                                <li class="divider"></li>
-                                                                <li><a href="#">Logout</a></li>
-                                                            </ul>
-                                                        </li>-->
+                         
                         </ul>
                     </div><!-- /.nav-collapse -->
                 </div>
@@ -270,14 +248,6 @@
     <script src="scripts/jquery-ui-1.10.1.custom.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="scripts/datatables/jquery.dataTables.js"></script>
-    <!--        <script>
-                                                            $(document).ready(function () {
-                                                                $('.datatable-1').dataTable();
-                                                                $('.dataTables_paginate').addClass("btn-group datatable-pagination");
-                                                                $('.dataTables_paginate > a').wrapInner('<span />');
-                                                                $('.dataTables_paginate > a:first-child').append('<i class="icon-chevron-left shaded"></i>');
-                                                                $('.dataTables_paginate > a:last-child').append('<i class="icon-chevron-right shaded"></i>');
-                                                            });
-            </script>-->
+   
 </body>
 </html>
