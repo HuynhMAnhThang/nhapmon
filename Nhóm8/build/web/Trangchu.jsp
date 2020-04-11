@@ -208,7 +208,7 @@
                                                     <li><a href="#" style="display: ${sessionScope.lg1}">Quản lý</a>
                                                         <ul>
                                                             <li><a href="Thanhvien.jsp">Quản lý người dùng</a></li>
-                                                            <li><a href="Sanpham.jsp">Quản lý sản phẩm</a></li>                                                           
+                                                            <li><a href="SanPham.jsp">Quản lý sản phẩm</a></li>                                                           
                                                         </ul>
                                                     </li>
                                                     <li><a href="Controller?btnAction=Giohang">Giỏ hàng</a></li>
