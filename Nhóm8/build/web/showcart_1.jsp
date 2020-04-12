@@ -59,7 +59,7 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-4">
                                 <div class="logo-small-device">
-                                    <a href="Trangchu.jsp"><img alt="" src="aassets/img/banner/banner-4.jpg"  width="100px" height="35px"></a>
+                                    <a href="Trangchu.jsp"><img alt="" src="assets/img/logo/logo.png"  width="100px" height="35px"></a>
                                 </div>
                             </div>
                             <div class="col-lg-8 col-md-8 col-8">
@@ -283,11 +283,11 @@
                                 <div class="footer-widget mb-30">
                                     <div class="footer-logo">
                                         <a href="Trangchu.jsp">
-                                            <img src="assets/img/logo/2.png" alt="">
+                                            <img src="assets/img/logo/logo.png" width="145px" height="31px" alt="">
                                         </a>
                                     </div>
                                     <div class="footer-about">
-                                        <p><span>OSWAN</span> the most latgest bike store in the wold can serve you latest ulity of motorcycle soucan sell here your motorcycle it quo </p>
+                                        <p><span>FPT</span> the most latgest bike store in the wold can serve you latest ulity of motorcycle soucan sell here your motorcycle it quo </p>
                                         <div class="footer-support">
                                             <h5>FOR SUPPORT</h5>
                                             <span> 01245 658 698 (Toll Free)</span>

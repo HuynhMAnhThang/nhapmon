@@ -25,14 +25,11 @@
                         <i class="icon-reorder shaded"></i>
                     </a>
 
-                     <a class="brand" href="Trangchu.jsp">
-                     ${sessionScope.USER}
-                    </a>
 
 
                     <div class="nav-collapse collapse navbar-inverse-collapse">
                         <ul class="nav nav-icons">
-                            <li class="active"><a href="#">
+                            <li ><a href="#">
                                     <i class="icon-envelope"></i>
                                 </a></li>
                             <li><a href="#">
@@ -51,33 +48,37 @@
                         </form>
 
                         <ul class="nav pull-right">
-                        
-                            <li><a href="Trangchu_1.jsp">
-                                    Đăng xuất
-                            </a></li>
-                         
+
+                            <li>  
+                                <a class="brand" href="Trangchu.jsp">
+                                    
+                                   XIN CHÀO ${sessionScope.USER}
+                                </a>
+                            </li>
+
                         </ul>
-                    </div><!-- /.nav-collapse -->
+                    </div>
                 </div>
             </div><!-- /navbar-inner -->
         </div><!-- /navbar -->
 
 
 
+
         <div class="wrapper">
             <div class="container">
                 <div class="row">
-                <div class="span3">
+                     <div class="span3">
                         <div class="sidebar">
 
                             <ul class="widget widget-menu unstyled">
                                 <li class="active">
                                     <a href="Trangchu.jsp">
-                                        <i class="menu-icon icon-dashboard"></i>
+                                        <i class="icon-hand-right"></i>
                                         Trang chủ
                                     </a>
                                 </li>
-                               
+
                                 <li>
                                     <a href="#">
                                         <i class="menu-icon icon-tasks"></i>
@@ -88,26 +89,26 @@
                             </ul><!--/.widget-nav-->
 
                             <ul class="widget widget-menu unstyled">
-                              <li>
+                                <li>
                                     <a class="collapsed" data-toggle="collapse" href="#togglePages1">
                                         <i class="menu-icon icon-cog"></i>
-                                         Quản lý Thành viên
+                                        Quản lý Thành viên
                                         <i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>                                        
                                     </a>
                                     <ul id="togglePages1" class="collapse unstyled">
                                         <li>
                                             <a href="NewLogin.jsp">
-                                                <i class="icon-inbox"></i>
+                                                <i class="icon-plus-sign"></i>
                                                 Thêm Thành Viên
                                             </a>
                                         </li>
                                         <li>
                                             <a href="Thanhvien.jsp">
-                                                <i class="icon-inbox"></i>
+                                                <i class="icon-list"></i>
                                                 Danh Sách Thành Viên
                                             </a>
                                         </li>
-                                       
+
                                     </ul>
                                 </li>
                             </ul><!--/.widget-nav-->
@@ -116,37 +117,36 @@
                                 <li>
                                     <a class="collapsed" data-toggle="collapse" href="#togglePages">
                                         <i class="menu-icon icon-cog"></i>
-                                         Quản lý sản phẩm
+                                        Quản lý sản phẩm
                                         <i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>                                        
                                     </a>
                                     <ul id="togglePages" class="collapse unstyled">
                                         <li>
                                             <a href="NewSp.jsp">
-                                                <i class="icon-inbox"></i>
+                                                <i class="icon-plus-sign"></i>
                                                 Thêm Sản Phẩm
                                             </a>
                                         </li>
                                         <li>
                                             <a href="SanPham.jsp">
-                                                <i class="icon-inbox"></i>
+                                                <i class="icon-list"></i>
                                                 Danh Sách Sản Phẩm
                                             </a>
                                         </li>
-                                       
+
                                     </ul>
                                 </li>
 
                                 <li>
-                                    <a href="#">
-                                        <i class="menu-icon icon-signout"></i>
-                                        Logout
+                                    <a href="Trangchu_1.jsp">
+                                        <i class="icon-circle-arrow-right"></i>
+                                        Đăng Xuất
                                     </a>
                                 </li>
                             </ul>
 
                         </div><!--/.sidebar-->
                     </div><!--/.span3-->
-
 
                     <div class="span9">
                         <div class="content">
@@ -162,25 +162,25 @@
                                         <div class="control-group">
                                             <label class="control-label" for="basicinput">Tên đăng nhập</label>
                                             <div class="controls">
-                                                <input name="txt1User" required data-title="A tooltip for the input" type="text" placeholder="Tên đăng nhập…" data-original-title="" class="span8 tip">
+                                                <input name="txt1User" required data-title="A tooltip for the input" type="text" placeholder="Tên đăng nhập…"  class="span8 tip">
                                             </div>
                                         </div>
                                         <div class="control-group">
                                             <label class="control-label" for="basicinput">Mật khẩu</label>
                                             <div class="controls">
-                                                <input name="txt1Pass" required data-title="A tooltip for the input" type="password" placeholder="Mật khẩu…" data-original-title="" class="span8 tip">
+                                                <input name="txt1Pass" required data-title="A tooltip for the input" type="password" placeholder="Mật khẩu…"  class="span8 tip">
                                             </div>
                                         </div>
                                         <div class="control-group">
                                             <label class="control-label" for="basicinput">Họ tên</label>
                                             <div class="controls">
-                                                <input name="txt1Name" required required data-title="A tooltip for the input" type="text" placeholder="Họ tên…" data-original-title="" class="span8 tip">
+                                                <input name="txt1Name" required required data-title="A tooltip for the input" type="text" placeholder="Họ tên…"  class="span8 tip">
                                             </div>
                                         </div>
                                         <div class="control-group">
                                             <label class="control-label" for="basicinput">Số điện thoại</label>
                                             <div class="controls">
-                                                <input name="txt1Sdt" required data-title="A tooltip for the input" type="text" placeholder="Số điện thoại…" data-original-title="" class="span8 tip">
+                                                <input name="txt1Sdt" required data-title="A tooltip for the input" type="text" placeholder="Số điện thoại…"  class="span8 tip">
                                             </div>
                                         </div>
 
@@ -237,7 +237,7 @@
         <div class="container">
 
 
-            <b class="copyright">&copy; 2014 Edmin - EGrappler.com </b> All rights reserved.
+            <b class="copyright">&copy; 2020  ThangHM-DucNa </b> All rights reserved.
         </div>
     </div>
 

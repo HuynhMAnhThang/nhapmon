@@ -7,10 +7,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Đăng nhập</title>
 
-        <!-- Font Icon -->
         <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
 
-        <!-- Main css -->
         <link rel="stylesheet" href="css/style.css">
         <style>
             .sign-in{
@@ -39,11 +37,11 @@
                         <form action="Controller" method="post" class="register-form" id="login-form">
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                <input type="text" name="txtUser" id="your_name" placeholder="Tài khoản"/>
+                                <input type="text" name="txtUser" id="your_name" placeholder="Tài khoản"  required   />
                             </div>
                             <div class="form-group">
                                 <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
-                                <input type="password" name="txtPass" id="your_pass" placeholder="Mật khẩu"/>
+                                <input type="password" name="txtPass" id="your_pass" placeholder="Mật khẩu"   required />
                             </div>
                             <div class="form-group">
                                 <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />

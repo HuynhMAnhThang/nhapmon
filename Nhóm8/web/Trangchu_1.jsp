@@ -48,27 +48,6 @@
     </head>
     <body>
 
-
-    <script>
-function myFunction() {
-var input, filter, table, tr, td, i, txtValue;
-input = document.getElementById("myInput");
-filter = input.value.toUpperCase();
-table = document.getElementById("myTable");
-tr = table.getElementsByTagName("tr");
-for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[1];
-    if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-        } else {
-            tr[i].style.display = "none";
-        }
-    }
-}
-}
-</script>
         <div class="wrapper">
        
             <header>
@@ -362,11 +341,10 @@ for (i = 0; i < tr.length; i++) {
                                             <div class="product-price">
                                                 <span>$<%=sp.getPrice()%></span>
                                             </div>
-                                            <p>ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore mag aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo it. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                            <p>Chiếc xe trình diễn độc nhất trên thế giới Mercedes-AMG Project ONE kết hợp hiệu suất đường đua ấn tượng và công nghệ hybrid công thức 1 thông dụng với hiệu quả điển hình. Điều này cho thấy triển vọng theo cách AMG Driving Performance định nghĩa trong tương lai.</p>
                                             <div class="shop-list-cart">
                                                 <form action="Controller">
-                                                    <input class="action-plus-2 p-action-none" type="submit" name="btnAction" value="Add to Cart">
-                                                    <!--</a>-->
+                                                   
                                                     <input type="hidden" name="txtCode" value="<%=sp.getCode()%>">
                                                     <input type="hidden" name="txtName" value="<%=sp.getName()%>">
                                                     <input type="hidden" name="txtPrice" value="<%=sp.getPrice()%>">
@@ -444,7 +422,7 @@ for (i = 0; i < tr.length; i++) {
                                         <i class="fa fa-star reting-color"></i>
                                     </div>
                                 </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adip elit, sed do tempor incididun ut labore et dolore magna aliqua. Ut enim ad mi , quis nostrud veniam exercitation .</p>
+                                <p>Chiếc xe trình diễn độc nhất trên thế giới Mercedes-AMG Project ONE kết hợp hiệu suất đường đua ấn tượng và công nghệ hybrid công thức 1 thông dụng với hiệu quả điển hình. Điều này cho thấy triển vọng theo cách AMG Driving Performance định nghĩa trong tương lai.</p>
                                 <div class="quick-view-select">
                                     <div class="select-option-part">
                                         <label>Size*</label>
@@ -489,11 +467,11 @@ for (i = 0; i < tr.length; i++) {
                                 <div class="footer-widget mb-30">
                                     <div class="footer-logo">
                                         <a href="Trangchu.jsp">
-                                            <img src="assets/img/logo/2.png" alt="">
+                                            <img src="assets/img/logo/logo.png" width="145px" height="31px" alt="">
                                         </a>
                                     </div>
                                     <div class="footer-about">
-                                        <p><span>OSWAN</span> the most latgest bike store in the wold can serve you latest ulity of motorcycle soucan sell here your motorcycle it quo </p>
+                                        <p><span>FPT</span> the most latgest bike store in the wold can serve you latest ulity of motorcycle soucan sell here your motorcycle it quo </p>
                                         <div class="footer-support">
                                             <h5>FOR SUPPORT</h5>
                                             <span> 01245 658 698 (Toll Free)</span>
@@ -568,8 +546,8 @@ for (i = 0; i < tr.length; i++) {
                                                 <span>Web</span>
                                             </div>
                                             <div class="food-info-content">
-                                                <a href="#">info@oswanmega.com</a>
-                                                <a href="#">www.oswanmega.com</a>
+                                                <a href="#">info@Fptmega.com</a>
+                                                <a href="#">www.Fptmega.com</a>
                                             </div>
                                         </div>
                                     </div>
@@ -606,5 +584,27 @@ for (i = 0; i < tr.length; i++) {
         <script src="assets/js/owl.carousel.min.js"></script>
         <script src="assets/js/plugins.js"></script>
         <script src="assets/js/main.js"></script>
+        
+
+    <script>
+function myFunction() {
+var input, filter, table, tr, td, i, txtValue;
+input = document.getElementById("myInput");
+filter = input.value.toUpperCase();
+table = document.getElementById("myTable");
+tr = table.getElementsByTagName("tr");
+for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+        } else {
+            tr[i].style.display = "none";
+        }
+    }
+}
+}
+</script>
     </body>
 </html>

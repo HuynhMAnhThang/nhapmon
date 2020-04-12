@@ -24,21 +24,18 @@
         </script>
     </head>
     <body>
-
-        <div class="navbar navbar-fixed-top">
+ <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
                         <i class="icon-reorder shaded"></i>
                     </a>
 
-                    <a class="brand" href="Trangchu.jsp">
-                           ${sessionScope.USER}
-                    </a>
+
 
                     <div class="nav-collapse collapse navbar-inverse-collapse">
                         <ul class="nav nav-icons">
-                            <li class="active"><a href="#">
+                            <li ><a href="#">
                                     <i class="icon-envelope"></i>
                                 </a></li>
                             <li><a href="#">
@@ -57,14 +54,16 @@
                         </form>
 
                         <ul class="nav pull-right">
-                          
-                            <li><a href="Trangchu_1.jsp">
-                                    Đăng xuất
+
+                            <li>  
+                                <a class="brand" href="Trangchu.jsp">
+                                    <i class="icon-user" class="brand"></i>
+                                      XIN CHÀO ${sessionScope.USER}
                                 </a>
                             </li>
-                          
+
                         </ul>
-                    </div><!-- /.nav-collapse -->
+                    </div>
                 </div>
             </div><!-- /navbar-inner -->
         </div><!-- /navbar -->
@@ -74,17 +73,17 @@
         <div class="wrapper">
             <div class="container">
                 <div class="row">
-        <div class="span3">
+                <div class="span3">
                         <div class="sidebar">
 
                             <ul class="widget widget-menu unstyled">
                                 <li class="active">
                                     <a href="Trangchu.jsp">
-                                        <i class="menu-icon icon-dashboard"></i>
+                                        <i class="icon-hand-right"></i>
                                         Trang chủ
                                     </a>
                                 </li>
-                               
+
                                 <li>
                                     <a href="#">
                                         <i class="menu-icon icon-tasks"></i>
@@ -95,26 +94,26 @@
                             </ul><!--/.widget-nav-->
 
                             <ul class="widget widget-menu unstyled">
-                              <li>
+                                <li>
                                     <a class="collapsed" data-toggle="collapse" href="#togglePages1">
                                         <i class="menu-icon icon-cog"></i>
-                                         Quản lý Thành viên
+                                        Quản lý Thành viên
                                         <i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>                                        
                                     </a>
                                     <ul id="togglePages1" class="collapse unstyled">
                                         <li>
                                             <a href="NewLogin.jsp">
-                                                <i class="icon-inbox"></i>
+                                                <i class="icon-plus-sign"></i>
                                                 Thêm Thành Viên
                                             </a>
                                         </li>
                                         <li>
                                             <a href="Thanhvien.jsp">
-                                                <i class="icon-inbox"></i>
+                                                <i class="icon-list"></i>
                                                 Danh Sách Thành Viên
                                             </a>
                                         </li>
-                                       
+
                                     </ul>
                                 </li>
                             </ul><!--/.widget-nav-->
@@ -123,30 +122,30 @@
                                 <li>
                                     <a class="collapsed" data-toggle="collapse" href="#togglePages">
                                         <i class="menu-icon icon-cog"></i>
-                                         Quản lý sản phẩm
+                                        Quản lý sản phẩm
                                         <i class="icon-chevron-down pull-right"></i><i class="icon-chevron-up pull-right"></i>                                        
                                     </a>
                                     <ul id="togglePages" class="collapse unstyled">
                                         <li>
                                             <a href="NewSp.jsp">
-                                                <i class="icon-inbox"></i>
+                                                <i class="icon-plus-sign"></i>
                                                 Thêm Sản Phẩm
                                             </a>
                                         </li>
                                         <li>
                                             <a href="SanPham.jsp">
-                                                <i class="icon-inbox"></i>
+                                                <i class="icon-list"></i>
                                                 Danh Sách Sản Phẩm
                                             </a>
                                         </li>
-                                       
+
                                     </ul>
                                 </li>
 
                                 <li>
-                                    <a href="#">
-                                        <i class="menu-icon icon-signout"></i>
-                                        Logout
+                                    <a href="Trangchu_1.jsp">
+                                        <i class="icon-circle-arrow-right"></i>
+                                        Đăng Xuất
                                     </a>
                                 </li>
                             </ul>
@@ -235,17 +234,17 @@
                                 <div class="w3-half">
                                     <div>
                                         <label>Mã sản phẩm</label>
-                                        <input class="control w3-input w3-border w3-light-grey" name="txtMasp" >
+                                        <input style="width: 500px;" required data-title="A tooltip for the input" type="text" placeholder="Mã Sản Phẩm…" data-original-title="" class="span8 tip" name="txtMasp" >
                                     </div>
                                     <br>
                                     <div>
                                         <label>Tên sản phẩm</label>
-                                        <input class="control w3-input w3-border w3-light-grey" name="txtTensp" >
+                                        <input style="width: 500px;" required data-title="A tooltip for the input" type="text" placeholder="Tên Sản Phẩn…" data-original-title="" class="span8 tip" name="txtTensp" >
                                     </div>
                                     <br>
                                     <div>
                                         <label>Giá</label>
-                                        <input class="control w3-input w3-border w3-light-grey" name="txtGia" >
+                                        <input style="width: 500px;" required data-title="A tooltip for the input" type="text" placeholder="Giá Sản Phẩm…" data-original-title="" class="span8 tip" name="txtGia" >
                                     </div>
                                     <br>
                                     <br>
@@ -268,7 +267,7 @@
             <div class="container">
 
 
-                <b class="copyright">&copy; 2014 Edmin - EGrappler.com </b> All rights reserved.
+                <b class="copyright">&copy; 2020  ThangHM-DucNa</b> All rights reserved.
             </div>
         </div>
 
