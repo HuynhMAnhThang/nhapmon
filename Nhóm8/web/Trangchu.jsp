@@ -292,7 +292,7 @@
                         <div class="product-sorting">                                   
                             <div class="sidebar-search">
                                 <form action="#">
-                                    <input type="text" placeholder="Search Products...">
+                                    <input type="text" placeholder="Tìm Kiếm Sản Phẩm...">
                                     <button><i class="ti-search"></i></button>
                                 </form>
                             </div>                               
@@ -322,9 +322,7 @@
                                             </div>
                                             <div class="product-action">
                                                 <form action="Controller">
-                                                    <!--                                                    <a class="action-plus-2 p-action-none" title="Add To Cart" href="#">-->
-                                                    <input class="action-plus-2 p-action-none" type="submit" name="btnAction" value="Add to Cart">
-                                                    <!--</a>-->
+                                                    <button class="action-plus-2 p-action-none"  name="btnAction" value="Add to Cart" onclick="alert('Thêm Vào Giỏ Hàng Thành công')">Thêm Giỏ Hàng</button>
                                                     <input type="hidden" name="txtCode" value="<%=sp.getCode()%>">
                                                     <input type="hidden" name="txtName" value="<%=sp.getName()%>">
                                                     <input type="hidden" name="txtPrice" value="<%=sp.getPrice()%>">

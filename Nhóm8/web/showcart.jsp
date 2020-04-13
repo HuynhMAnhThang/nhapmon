@@ -223,9 +223,7 @@
                                                         </td>
                                                         <td class="product-price"><span class="amount">${rows.value.sanpham.price}</span></td>
                                                         <td class="product-quantity">
-                                                            <!--                                                        <div class="quantity-range">
-                                                                                                                        <input class="input-text qty text" type="number" step="1" min="0" value="1" title="Qty" size="4">
-                                                                                                                    </div>-->
+                                                            
                                                             ${rows.value.quantity}
                                                         </td>
                                                         <td class="product-subtotal">${rows.value.quantity * rows.value.sanpham.price}</td>
@@ -248,13 +246,13 @@
                                 </div>
                                 <div class="update-checkout-cart">
                                     <div class="update-cart">
-                                        <!--                                        <button class="btn-style cr-btn"><span>Xóa</span></button>-->
-                                        <input type="submit" value="Remove" name="btnAction" class="btn-style cr-btn"/>
+                                        <!-- <button class="btn-style cr-btn"><span>Xóa</span></button>-->
+                                        <!--<input type="submit" value="Remove" name="btnAction" class="btn-style cr-btn"/>-->
+                                        <button value="Remove" name="btnAction" class="btn-style cr-btn" onclick="alert('Bạn Xóa Thành Công')">Xóa</button>
+                                            
+                                        
                                     </div>
                                     <div class="update-cart">
-                                        <!--                                        <a class="btn-style cr-btn" href="#">
-                                                                                    <span>Thanh toán</span>
-                                                                                </a>-->
                                         <input class="btn-style cr-btn" type="submit" value="Thanh Toan" onclick="thongbao()" name="btnAction"/>
                                     </div>
                                 </div>

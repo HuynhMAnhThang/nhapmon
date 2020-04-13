@@ -258,14 +258,10 @@
                                     </a>
                                 </div>
                                 <div class="update-checkout-cart">
-                                    <div class="update-cart">
-                                        <!--                                        <button class="btn-style cr-btn"><span>Xóa</span></button>-->
-                                        <input type="submit" value="XOA" name="btnAction" class="btn-style cr-btn"/>
+                                    <div class="update-cart">                                       
+                                        <button value="Remove" name="btnAction" class="btn-style cr-btn" onclick="alert('Chưa Đăng Nhập Không Thể Xóax')">Xóa</button>
                                     </div>
-                                    <div class="update-cart">
-                                        <!--                                        <a class="btn-style cr-btn" href="#">
-                                                                                    <span>Thanh toán</span>
-                                                                                </a>-->
+                                    <div class="update-cart">                                      
                                         <input class="btn-style cr-btn" type="submit" value="Thanh Toan" onclick="thongbao()" name="btnAction"/>
                                     </div>
                                 </div>

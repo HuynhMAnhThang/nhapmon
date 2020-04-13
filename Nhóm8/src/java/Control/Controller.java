@@ -231,14 +231,15 @@ public class Controller extends HttpServlet {
                         CartBean shop = (CartBean) session.getAttribute("SHOP");
                         if (shop != null) {
                             for (int i = 0; i < list.length; i++) {
+
                                 shop.removeSanPham(list[i]);
                             }
                             session.setAttribute("SHOP", shop);
                         }
                     }
                 }
-
-                RequestDispatcher rd = request.getRequestDispatcher("showcart_1.jsp");
+                String url = "Controller?btnAction=View Cart";
+                RequestDispatcher rd = request.getRequestDispatcher(url);
                 rd.forward(request, response);
             } else if (action.equals("Thanh Toan")) {
                 String[] list = request.getParameterValues("rmv");
