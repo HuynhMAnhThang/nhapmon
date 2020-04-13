@@ -221,7 +221,7 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Cập nhật</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Cập Nhật Thành Viên</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -260,8 +260,8 @@
                                 </div>                          
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="submit" class="btn btn-info" value="Update" name="btnAction" >Update<i class="icon-edit"></i></button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                                <button type="submit" class="btn btn-info" value="Update" name="btnAction" >Cập Nhật<i class="icon-edit"></i></button>
                             </div>
                         </form>                   
                     </div>
