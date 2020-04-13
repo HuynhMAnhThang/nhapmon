@@ -22,14 +22,6 @@ public class Load implements Serializable {
     public Load() {
     }
 
-    public Load(String Name, String Sdt, String Chucvu, String Username, String Pass) {
-        this.Name = Name;
-        this.Sdt = Sdt;
-        this.Chucvu = Chucvu;
-        this.Username = Username;
-        this.Pass = Pass;
-    }
-
     public Load(String Name, String Username, String Sdt, String Chucvu) {
         this.Name = Name;
         this.Username = Username;

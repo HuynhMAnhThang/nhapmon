@@ -40,7 +40,7 @@ public class LoginBean {
                 String Name = rs.getString(3);
                 String Sdt = rs.getString(4);
                 String Chucvu = rs.getString(5);
-                Load ld = new Load(Name, Username, Sdt, Chucvu, Pass);
+                Load ld = new Load(Name, Username, Sdt, Chucvu);
                 list.add(ld);
             }
             rs.close();
@@ -75,7 +75,7 @@ public class LoginBean {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             String url = "jdbc:sqlserver://localhost:1433;databaseName=Ass_Java4";
             Connection con = DriverManager.getConnection(url, "sa", "123");
-            String sql = " Delete from Users where UserName = '" + username + "'";
+            String sql = "delete from Users where UserName = '" + username + "'";
             if (username.length() > 0) {
                 PreparedStatement stm = con.prepareStatement(sql);
                 stm.executeUpdate();

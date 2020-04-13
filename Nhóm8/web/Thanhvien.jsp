@@ -176,9 +176,10 @@
 
                                             <tr class="odd gradeX">
                                                 <td><%=ld.getName()%></td>
-                                                <td><%=ld.getChucvu()%></td>
                                                 <td><%=ld.getSdt()%></td>
-                                                <td><%=ld.getUsername()%></td>                                          
+                                                <td><%=ld.getUsername()%></td>  
+                                                <td><%=ld.getChucvu()%></td>                                              
+                                                                                        
                                                 <td>
                                                     <form action="Controller"> 
                                                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -186,6 +187,9 @@
                                                         </button>
                                                         <button class="btn btn-primary" name="btnAction" value="vut" onclick="alert('Bạn đã xóa thành viên thành công')"><i class="icon-remove"></i></button>
                                                         <input type="hidden" name="txtUser" value="<%=ld.getUsername()%>">
+                                                        <input type="hidden" name="txtChucvu" value="<%=ld.getChucvu()%>">
+                                                        <input type="hidden" name="txtSdt" value="<%=ld.getSdt()%>">
+                                                        <input type="hidden" name="txtName" value="<%=ld.getName()%>">
                                                     </form>
                                                 </td>
 
